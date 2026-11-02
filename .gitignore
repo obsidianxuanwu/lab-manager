@@ -1,0 +1,21 @@
+# 打包产物
+*.zip
+*.7z
+*.rar
+
+# 录屏与原始数据（体积大或含真实信息，一律不进仓库）
+*.mp4
+*.mov
+*.xls
+*.xlsx
+*.docx
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 临时文件
+*.log
+*.tmp
+~$*

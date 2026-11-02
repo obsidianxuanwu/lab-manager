@@ -1,0 +1,2904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a5fb4">
+<title>人工智能与软件学院实验室管理系统</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --blue:#1a5fb4;--blue-d:#14488a;--blue-l:#e8f0fb;
+  --green:#1a7f37;--green-bg:#e6f4ea;--green-bd:#a8d5b5;
+  --red:#b42318;--red-bg:#fdecea;--red-bd:#f5c6c2;
+  --amber:#b54708;--amber-bg:#fff4e5;--amber-bd:#f5d5a8;
+  --gray:#5c6470;--gray-l:#98a2b3;--line:#e3e6ea;--bg:#f4f6f8;
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:#1c1f23;font-size:16px;line-height:1.55;
+}
+header{
+  background:linear-gradient(135deg,#1a5fb4 0%,#14488a 100%);
+  color:#fff;padding:16px 18px;position:sticky;top:0;z-index:40;
+  box-shadow:0 3px 14px rgba(16,24,40,.18);
+}
+.hd{display:flex;align-items:center;gap:14px;max-width:1240px;margin:0 auto}
+/* 学院 logo：圆形，带白色描边，在蓝色渐变底上更清楚 */
+.hd .logo{
+  width:48px;height:48px;border-radius:50%;flex-shrink:0;display:block;
+  background:#fff;padding:2px;box-sizing:border-box;
+  box-shadow:0 2px 6px rgba(0,0,0,.22);
+}
+.hd h1{
+  font-size:26px;font-weight:700;letter-spacing:1.2px;flex-shrink:0;
+  text-shadow:0 1px 2px rgba(0,0,0,.16);line-height:1.25;
+}
+.hd .sub{
+  font-size:13px;opacity:.88;margin-left:auto;text-align:right;
+  background:rgba(255,255,255,.14);border-radius:20px;padding:5px 14px;white-space:nowrap;
+}
+/* 进了某个实验室后：大标题仍是系统名，右侧徽章变成"203 智能科学实验室" */
+.hd .sub.lab{
+  background:rgba(255,255,255,.24);font-weight:600;font-size:14.5px;
+  border-radius:10px;padding:7px 16px;letter-spacing:.4px;
+}
+.hd .sub.lab .lb-no{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:16px;font-weight:700;margin-right:7px}
+.back{
+  border:0;background:rgba(255,255,255,.2);color:#fff;font-size:14.5px;font-family:inherit;
+  border-radius:9px;padding:8px 15px;cursor:pointer;flex-shrink:0;font-weight:500;
+}
+.back:hover{background:rgba(255,255,255,.32)}
+main{max-width:1240px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:12px;padding:15px;margin-bottom:12px;box-shadow:0 1px 3px rgba(16,24,40,.07)}
+.card>h2{font-size:15.5px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card>h2::before{content:'';width:4px;height:16px;background:var(--blue);border-radius:2px;flex-shrink:0}
+.card>h2 .hint{font-size:12.5px;font-weight:400;color:var(--gray-l);margin-left:auto}
+.alert{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;color:var(--amber)}
+.alert.r{background:var(--red-bg);border-color:var(--red-bd);color:var(--red)}
+.alert .t{font-weight:600;margin-bottom:6px}
+.alert ul{margin:0;padding-left:19px}
+.alert li{margin:3px 0;line-height:1.5}
+.alert li b{font-weight:600}
+/* 实验室列表 */
+.lab{display:flex;align-items:center;gap:13px;padding:14px;background:#fff;border-radius:12px;margin-bottom:10px;box-shadow:0 1px 3px rgba(16,24,40,.07);cursor:pointer;border-left:4px solid var(--blue)}
+.lab:hover{background:#fafbfc}
+.lab .no{min-width:74px;height:46px;border-radius:9px;background:var(--blue-l);color:var(--blue-d);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;font-family:ui-monospace,Menlo,monospace;flex-shrink:0}
+.lab .info{flex:1;min-width:0}
+.lab .nm{font-size:15.5px;font-weight:600}
+.lab .dt{font-size:12.5px;color:var(--gray);margin-top:3px}
+.lab .dt .sep{margin:0 6px;color:#cfd6dd}
+.lab .tags{display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0}
+.tag{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;white-space:nowrap;font-weight:500}
+.tag.r{background:var(--red-bg);color:var(--red)}
+.tag.a{background:var(--amber-bg);color:var(--amber)}
+.tag.g{background:var(--green-bg);color:var(--green)}
+.tag.b{background:var(--blue-l);color:var(--blue-d)}
+.tag.gy{background:#eef0f3;color:var(--gray)}
+/* 表格 */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -15px;padding:0 15px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#f7f9fb;color:var(--gray);font-weight:600;font-size:12.5px;white-space:nowrap}
+td.num{font-family:ui-monospace,Menlo,monospace}
+tr.group-row td{background:#fafbfc}
+tr.sub-row td:first-child{color:var(--gray-l)}
+td[contenteditable="true"],th[contenteditable="true"]{background:#fffdf5;outline:none;cursor:text;min-width:60px}
+td[contenteditable="true"]:focus{background:#fff8e1;box-shadow:inset 0 0 0 2px var(--blue)}
+.del{border:0;background:none;color:var(--red);font-size:17px;cursor:pointer;padding:0 4px;line-height:1;font-family:inherit}
+.del:hover{opacity:.7}
+.sect{margin-bottom:20px}
+.sect:last-child{margin-bottom:0}
+.sect-h{font-size:14.5px;font-weight:600;color:#3d4551;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.sect-h .add{margin-left:auto}
+/* 按钮 */
+.btn{border:0;border-radius:9px;padding:9px 15px;font-size:14px;font-family:inherit;cursor:pointer;background:var(--blue);color:#fff;font-weight:500}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:#eef1f5;color:#3d4551}
+.btn.ghost:hover{background:#e3e8ee}
+.btn.sm{padding:6px 12px;font-size:13px}
+.btn.danger{background:#fff1f0;color:var(--red);border:1px solid var(--red-bd)}
+.btn.danger:hover{background:#ffe4e1}
+.row-btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+/* 报修 */
+.rep{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px;margin-bottom:10px}
+.rep.pending{border-left:4px solid var(--amber)}
+.rep.open{border-left:4px solid var(--red)}
+.rep.done{border-left:4px solid var(--green-bd);opacity:.75}
+.rep-h{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:7px}
+.rep-h .m{font-weight:700;font-family:ui-monospace,Menlo,monospace;font-size:15px}
+.rep-h .tm{font-size:12.5px;color:var(--gray-l);margin-left:auto}
+.rep-q{font-size:14.5px;margin-bottom:10px;white-space:pre-wrap;word-break:break-word}
+/* 报修问题多选：两列卡片式勾选 */
+.rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;margin-bottom:10px}
+.rp-item{display:flex;align-items:center;gap:8px;font-size:14px;padding:9px 11px;
+  border:1px solid var(--line);border-radius:9px;cursor:pointer;background:#fff;
+  line-height:1.3;user-select:none}
+.rp-item:hover{background:#f7fbff;border-color:#c9d8ea}
+.rp-item input{width:17px;height:17px;accent-color:var(--blue);cursor:pointer;flex-shrink:0;margin:0}
+.rp-item.on{background:var(--blue-l);border-color:var(--blue);font-weight:600;color:var(--blue-d)}
+@media(max-width:520px){ .rp-grid{grid-template-columns:1fr} }
+.rp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.rp-tag{display:inline-block;font-size:12.5px;padding:3px 10px;border-radius:20px;
+  background:#eef1f5;color:#3d4551;font-weight:500}
+.rp-tag.other{background:var(--amber-bg);color:var(--amber)}
+.rep-s{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px}
+.rep-s label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.rep-s input{width:17px;height:17px;cursor:pointer;accent-color:var(--blue)}
+label.f{display:block;margin-bottom:11px}
+label.f .k{display:block;font-size:13px;color:var(--gray);margin-bottom:5px}
+input[type=text],input[type=date],textarea,select{
+  width:100%;border:1px solid var(--line);border-radius:9px;padding:9px 12px;
+  font-size:14.5px;font-family:inherit;background:#fff;color:#1c1f23;outline:none;
+}
+textarea{line-height:1.6;resize:vertical;min-height:74px}
+input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,95,180,.1)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.empty{text-align:center;padding:34px 16px;color:var(--gray-l);font-size:14.5px}
+.mask{position:fixed;inset:0;background:rgba(16,24,40,.5);z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.mask.on{display:flex}
+.dlg{background:#fff;border-radius:14px;padding:20px;width:100%;max-width:520px;max-height:88vh;overflow-y:auto}
+.dlg h3{font-size:17px;margin-bottom:4px}
+.dlg .st{font-size:13px;color:var(--gray);margin-bottom:15px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,10px);background:rgba(28,31,35,.94);color:#fff;font-size:14px;padding:11px 20px;border-radius:24px;z-index:200;opacity:0;transition:.25s;pointer-events:none;max-width:88vw;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+pre.prev{background:#f7f9fb;border-radius:8px;padding:11px;font-size:12px;overflow:auto;max-height:300px;white-space:pre-wrap;word-break:break-all;margin-top:8px}
+.pick{background:#f7f9fb;border-radius:9px;padding:11px;margin-bottom:9px;font-size:13.5px}
+.pick .ok{color:var(--green);font-weight:600}
+.pick .bad{color:var(--red);font-weight:600}
+.muted{color:var(--gray-l);font-size:12.5px}
+/* ---- 模块二：日程总表 / 课表 ---- */
+.mx-ctl{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:11px}
+.mx-ctl .lb{font-size:13px;color:var(--gray)}
+.mx-ctl input[type=number]{width:74px;height:38px;text-align:center;font-size:15px;font-weight:600;font-family:ui-monospace,Menlo,monospace}
+.step{width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:9px;font-size:18px;cursor:pointer;font-family:inherit;color:#3d4551;line-height:1}
+.step:hover{background:#f2f5f8}
+.mx-days{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.day-btn{flex:1;min-width:64px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 4px;font-size:13.5px;cursor:pointer;font-family:inherit;color:#3d4551;display:flex;flex-direction:column;align-items:center;gap:2px}
+.day-btn .d{font-size:11px;color:var(--gray-l)}
+.day-btn:hover{background:#f2f5f8}
+.day-btn.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.day-btn.on .d{color:rgba(255,255,255,.8)}
+.day-btn.now{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+.mx-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -15px;padding:0 15px}
+table.mx{border-collapse:separate;border-spacing:3px;width:100%;min-width:720px}
+table.mx thead th{background:#f7f9fb;color:var(--gray);font-size:12.5px;font-weight:600;padding:7px 6px;text-align:center;white-space:nowrap;border-radius:8px}
+table.mx thead th.today{background:var(--blue-l);color:var(--blue-d)}
+table.mx thead th .d{display:block;font-size:10.5px;font-weight:400;color:var(--gray-l);margin-top:1px}
+table.mx th.corner{width:66px;background:transparent}
+table.mx th.labcol{cursor:grab;min-width:132px;user-select:none}
+table.mx th.labcol .no{display:block;font-family:ui-monospace,Menlo,monospace;font-size:15px;font-weight:700;color:#1c1f23}
+table.mx th.labcol .nm{display:block;font-size:11.5px;font-weight:400;color:var(--gray);margin-top:1px}
+table.mx th.labcol.dragging{opacity:.4}
+table.mx th.labcol.dropzone{box-shadow:inset 0 0 0 2px var(--blue)}
+table.mx th.rowh{width:66px;text-align:right;font-size:12px;font-weight:600;color:#3d4551;background:transparent;white-space:nowrap;padding-right:4px}
+table.mx td.cell{padding:6px;vertical-align:top;border-radius:8px}
+table.mx td.cell.free{background:#f7f9fb;border:1px dashed #dfe4ea;text-align:center}
+table.mx td.cell.free .free-t{font-size:12px;color:#c2cad3}
+table.mx td.cell.busy{background:var(--red-bg);cursor:pointer}
+table.mx td.cell.busy:hover{outline:2px solid #f0b4ae}
+table.mx .one{padding:2px 0}
+table.mx .one + .one{border-top:1px dashed #f0b4ae;margin-top:4px;padding-top:5px}
+table.mx .c1{font-size:12.5px;font-weight:700;color:var(--red);line-height:1.35;word-break:break-word}
+table.mx .c2{font-size:11.5px;color:#8a4a44;margin-top:2px;word-break:break-word}
+table.mx .c3{font-size:10.5px;color:#9c6a65;margin-top:1px;font-family:ui-monospace,Menlo,monospace}
+table.mx.sched td.cell.free{background:var(--green-bg);border:1px dashed var(--green-bd)}
+table.mx.sched td.cell.free .free-t{color:var(--green)}
+.cd{background:#f7f9fb;border-radius:10px;padding:11px 13px;margin-bottom:9px}
+.cd-t{font-size:15px;font-weight:600;margin-bottom:6px}
+.cd-l{font-size:13.5px;color:#3d4551;margin:2px 0}
+.cd-l b{display:inline-block;min-width:56px;color:var(--gray);font-weight:500}
+.vtabs{display:flex;gap:7px;margin-bottom:12px}
+.vtabs button{flex:1;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 8px;font-size:14.5px;cursor:pointer;font-family:inherit;color:#3d4551;font-weight:500}
+.vtabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.ltab{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap}
+.ltab button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 15px;font-size:14px;cursor:pointer;font-family:inherit;color:#3d4551}
+.ltab button.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.editmode-lab{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--gray);
+  border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 13px;cursor:pointer;white-space:nowrap}
+.editmode-lab:hover{background:#f2f5f8}
+.editmode-lab input{width:16px;height:16px;accent-color:var(--blue);cursor:pointer}
+/* 文件选择：原生 input 又小又不显眼，包成明显的按钮 */
+.filebox{border:2px dashed #c3cdd8;border-radius:12px;padding:20px 16px;text-align:center;background:#fafbfc;cursor:pointer;display:block;margin-bottom:4px}
+.filebox:hover{border-color:var(--blue);background:#f4f8fd}
+.filebox .fi{font-size:26px;line-height:1;margin-bottom:7px}
+.filebox .ft{font-size:15px;font-weight:600;color:var(--blue-d)}
+.filebox .fs{font-size:12.5px;color:var(--gray-l);margin-top:4px}
+.filebox input{display:none}
+.card-btns{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
+.mini{border:1px solid var(--line);background:#fff;color:var(--blue-d);font-size:12.5px;font-family:inherit;
+      padding:6px 11px;border-radius:8px;cursor:pointer;min-height:32px}
+.mini:hover{background:var(--blue-l);border-color:var(--blue)}
+.mini.warn{color:var(--amber);border-color:var(--amber-bd);background:var(--amber-bg)}
+.mini.warn:hover{background:#ffe9cc}
+.nocourse{color:var(--amber);font-size:12.5px}
+td.rowbtns{white-space:nowrap;text-align:center;vertical-align:middle;background:#fcfdfe}
+td.rowbtns .mini{padding:4px 9px;min-height:28px;font-size:12px;margin:0 2px}
+td.rowbtns .delmini{color:var(--red);border-color:#f0c4c0}
+td.rowbtns .delmini:hover{background:#fff1f0}
+@media(max-width:600px){
+  .two{grid-template-columns:1fr}
+  main{padding:11px}
+  .lab .no{min-width:62px;font-size:15px}
+  header{padding:12px 14px}
+  .hd{flex-wrap:wrap;gap:9px}
+  .hd h1{font-size:17.5px;letter-spacing:.5px}
+  .hd .logo{width:34px;height:34px}
+  .hd .sub{font-size:12px;padding:4px 11px;margin-left:0;order:3;width:100%;text-align:left}
+}
+/* 页脚署名：灰色小字，居中，始终在页面最下方 */
+.credit{
+  text-align:center;font-size:12px;color:#98a2b3;
+  padding:22px 16px calc(24px + env(safe-area-inset-bottom,0px));
+  line-height:1.9;letter-spacing:.2px;user-select:text;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <button class="back" id="btnBack" style="display:none" onclick="goHome()">← 返回</button>
+    <img class="logo" alt="院徽" src="data:image/png;base64,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">
+    <h1 id="title">人工智能与软件学院实验室管理系统</h1>
+    <span class="sub" id="sub"></span>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- 署名：放在 #app 外面，这样切页面重画内容时不会被冲掉 -->
+<footer class="credit">【制作人：江苏师范大学科文学院-人工智能与软件学院-高莉】</footer>
+
+<div class="mask" id="mask"><div class="dlg" id="dlg"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   实验室管理系统 —— 模块一：实验室资产管理
+   单机使用，数据存本机。不联网。
+   原则：数据原样保留，不纠正、不规范、不换算。
+   ============================================================ */
+
+var LS_KEY = 'lab_mgmt_v1';
+var DB = { labs: [], version: 1, updated: '' };
+
+/* ---------- 预置数据：来自「10.13副本软件学院实验室配置清单6.11.1」的两个工作表 ---------- */
+function seedData(){
+  return {
+    version: 1,
+    updated: today(),
+    labs: [
+      {
+        id: '203',
+        name: '智能科学实验室',
+        hw: [
+          { item:'CPU',  config:'Intel(R) Core(TM) i7-10700', year:'2020', warranty:'过保', qty:'64台' },
+          { item:'内存', config:'16GB', year:'2020', warranty:'过保', qty:'' },
+          { item:'硬盘', config:'900GB', year:'2020', warranty:'过保', qty:'' },
+          { item:'网络', config:'有线', year:'—', warranty:'—', qty:'' }
+        ],
+        env: [
+          { item:'操作系统', config:'Windows10-64' },
+          { item:'还原保护', config:'增霸卡 还原系统' },
+          { item:'网络配置', config:'固定IP' }
+        ],
+        sw: [
+          { cat:'开发工具', name:'IntelliJ IDEA', ver:'2023.2..1', note:'' },
+          { cat:'开发工具', name:'Red Panda Dev-C++', ver:'6.5', note:'' },
+          { cat:'开发工具', name:'Microsoft Visual C++ 2010 Express', ver:'10.0.40219', note:'' },
+          { cat:'开发工具', name:'PyCharm', ver:'2026.1', note:'' },
+          { cat:'编程语言', name:'Python', ver:'3.9', note:'' },
+          { cat:'编程语言', name:'JAVA', ver:'21', note:'' },
+          { cat:'虚拟仿真', name:'vmware', ver:'17', note:'' },
+          { cat:'虚拟仿真', name:'Proteus 8 Professional', ver:'37159', note:'' },
+          { cat:'虚拟仿真', name:'Linux', ver:'CentOS 7', note:'' },
+          { cat:'网络仿真', name:'Cisco Packet Tracer', ver:'6.2 student', note:'' },
+          { cat:'办公软件', name:'office', ver:'2016', note:'' },
+          { cat:'统计分析', name:'IBM SPSS Statistics 26', ver:'26', note:'' },
+          { cat:'统计分析', name:'MATLAB', ver:'R2024b', note:'' },
+          { cat:'数据库管理系统', name:'SQLSever 8.0', ver:'8', note:'' },
+          { cat:'电子电路仿真软件', name:'Multisim', ver:'8.0.24', note:'' },
+          { cat:'原型设计软件', name:'Axure RP9', ver:'9.0.0.3653', note:'' },
+          { cat:'通讯工具', name:'微信、QQ', ver:'', note:'' }
+        ],
+        courses: [],
+        repairs: []
+      },
+      {
+        id: '330',
+        name: '东软实训室',
+        hw: [
+          { item:'CPU',  config:'Intel(R) Core(TM) i5-12500', year:'2023', warranty:'过保', qty:'69' },
+          { item:'内存', config:'16GB', year:'2023', warranty:'过保', qty:'' },
+          { item:'硬盘', config:'800GB', year:'2017', warranty:'过保', qty:'' },
+          { item:'网络', config:'有线', year:'—', warranty:'—', qty:'' }
+        ],
+        env: [
+          { item:'操作系统', config:'Windows10-64' },
+          { item:'还原保护', config:'增霸卡还原系统' },
+          { item:'网络配置', config:'固定IP' }
+        ],
+        sw: [
+          { cat:'开发工具', name:'Visual Studio Code', ver:'1.113.0', note:'' },
+          { cat:'开发工具', name:'IntelliJ IDEA', ver:'2025.2.6.1', note:'' },
+          { cat:'开发工具', name:'小程序开发工具', ver:'3.9.41.0', note:'' },
+          { cat:'开发工具', name:'Visual C++ 6.0', ver:'6', note:'' },
+          { cat:'开发工具', name:'Red Panda Dev-C++', ver:'6.5', note:'' },
+          { cat:'开发工具', name:'NILabVIEW(2018)', ver:'18.00.49152', note:'' },
+          { cat:'开发工具', name:'PyCharm', ver:'2022', note:'' },
+          { cat:'编程语言', name:'Python', ver:'3.5', note:'' },
+          { cat:'编程语言', name:'JAVA', ver:'21', note:'' },
+          { cat:'办公软件', name:'office', ver:'2016', note:'' },
+          { cat:'虚拟平台', name:'LOTVERP虚拟平台', ver:'2020.3.7.10015176', note:'' },
+          { cat:'数据库管理系统', name:'SQLyog-32bit', ver:'v11.24', note:'' },
+          { cat:'统计软件', name:'IBM SPSS Statistics21', ver:'21', note:'' },
+          { cat:'通讯工具', name:'微信、QQ', ver:'', note:'' }
+        ],
+        courses: [
+          { day: 5, big: "1", crs: "计算机网络技术", cls: "24物联班", tch: "李智远", weeks: "7-14", periods: "01-02" },
+          { day: 1, big: "1", crs: "计算机网络技术[实验学时]", cls: "24软件1班", tch: "李智远", weeks: "7-14", periods: "01-02" },
+          { day: 2, big: "1", crs: "数据结构（C++）", cls: "25智能3班", tch: "孙可可", weeks: "7-14", periods: "01-02" },
+          { day: 3, big: "1", crs: "Java程序设计[实验学时]", cls: "25计科4班", tch: "闵玄", weeks: "1-14", periods: "01-02" },
+          { day: 4, big: "1", crs: "Linux操作系统", cls: "24软件3班", tch: "张龙波", weeks: "1-14", periods: "01-02" },
+          { day: 5, big: "2", crs: "计算机网络技术", cls: "24智能1班", tch: "李智远", weeks: "7-14", periods: "03-04" },
+          { day: 1, big: "2", crs: "计算机网络技术[实验学时]", cls: "24软件2班", tch: "李智远", weeks: "7-14", periods: "03-04" },
+          { day: 2, big: "2", crs: "数字逻辑电路", cls: "25计科3班", tch: "王波", weeks: "12-16", periods: "03-04-05" },
+          { day: 3, big: "2", crs: "人工智能原理", cls: "24计科2班", tch: "孙宇航", weeks: "5-12", periods: "03-04" },
+          { day: 4, big: "2", crs: "Linux操作系统", cls: "24软件2班", tch: "张龙波", weeks: "1-14", periods: "03-04" },
+          { day: 5, big: "3", crs: "计算机网络技术", cls: "24软件3班", tch: "周俊", weeks: "7-10", periods: "06-07" },
+          { day: 5, big: "3", crs: "Linux操作系统", cls: "24数据2班", tch: "徐欢", weeks: "13-14", periods: "06-07" },
+          { day: 1, big: "3", crs: "计算机网络技术", cls: "24数据1班", tch: "周俊", weeks: "7-14", periods: "06-07" },
+          { day: 2, big: "3", crs: "智能数据挖掘", cls: "24数据2班", tch: "唐仕兵", weeks: "3", periods: "06-07" },
+          { day: 2, big: "3", crs: "智能数据挖掘", cls: "24数据2班", tch: "唐仕兵", weeks: "6,15", periods: "06-07" },
+          { day: 2, big: "3", crs: "数据结构(Java)", cls: "25数据1班", tch: "孟宣彤", weeks: "7-14", periods: "06-07" },
+          { day: 3, big: "3", crs: "面向对象程序设计Ⅰ(Java)", cls: "26软件3班", tch: "石玲", weeks: "6,8-12,14,16", periods: "06-07" },
+          { day: 4, big: "3", crs: "数据库系统原理", cls: "25软件4班", tch: "祖婉婉", weeks: "7-14", periods: "06-07" },
+          { day: 1, big: "4", crs: "C语言程序设计实验", cls: "26通信2班", tch: "程红林", weeks: "6-13", periods: "08-09" },
+          { day: 2, big: "4", crs: "智能数据挖掘", cls: "24数据2班", tch: "唐仕兵", weeks: "3", periods: "08" },
+          { day: 2, big: "4", crs: "智能数据挖掘", cls: "24数据2班", tch: "唐仕兵", weeks: "6,15", periods: "08" },
+          { day: 3, big: "4", crs: "数据库系统原理", cls: "25软件3班", tch: "祖婉婉", weeks: "7-14", periods: "08-09" },
+          { day: 4, big: "4", crs: "Web前端设计与开发", cls: "26数据4班", tch: "耿筠", weeks: "5-16", periods: "08-09" },
+          { day: 1, big: "5", crs: "面向对象程序设计(Java)", cls: "26Z计科班", tch: "闵玄", weeks: "11-14", periods: "10-11" },
+        ],
+        repairs: []
+      }
+    ],
+    /* 本学期第一周周一是几月几号。老师填一次，之后"第几周周几"自动换算日期。
+       留空则只显示周次、不显示日期。 */
+    semester: { firstMonday: '' }
+  };
+}
+
+/* ============================================================
+   小工具
+   ============================================================ */
+function $(s){ return document.querySelector(s); }
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+}
+var toastTimer;
+function toast(m){ var t=$('#toast'); t.textContent=m; t.classList.add('on');
+  clearTimeout(toastTimer); toastTimer=setTimeout(function(){ t.classList.remove('on'); },2200); }
+function today(){
+  var d=new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function save(){
+  DB.updated = today();
+  try { localStorage.setItem(LS_KEY, JSON.stringify(DB)); }
+  catch(e){ toast('保存失败：浏览器存储不可用'); }
+}
+function load(){
+  try {
+    var raw = localStorage.getItem(LS_KEY);
+    if (raw){ var d = JSON.parse(raw); if (d && d.labs) return d; }
+  } catch(e){}
+  return null;
+}
+function findLab(id){ for (var i=0;i<DB.labs.length;i++) if (DB.labs[i].id===id) return DB.labs[i]; return null; }
+
+/* 报修状态判定 —— 两个状态独立 */
+function repPending(r){ return !r.declared && !r.fixed; }   /* 未申报 */
+function repOpen(r){ return r.declared && !r.fixed; }       /* 已申报但未修完 */
+function repDone(r){ return r.fixed; }                       /* 已修完 */
+function repState(r){ return repDone(r)?'done':(repPending(r)?'pending':'open'); }
+
+/* ---------- 报修问题：固定 6 个选项，可多选 ----------
+   只有勾选"其他"时才需要填具体描述。
+   旧记录只有 problem 自由文本、没有 problems 数组，显示时按原文回退。 */
+var REP_PROBLEMS = ['不能上网', '电脑没反应', '屏幕点不亮', '键盘不能用', '鼠标不能用', '其他'];
+
+/* 显示用文字：按固定顺序拼接，不受勾选先后影响 */
+function repProblemText(r){
+  if (!r) return '';
+  var list = (r.problems && r.problems.length) ? r.problems : null;
+  if (!list) return String(r.problem || '');          /* 旧记录：原文显示 */
+  var note = (r.problemOther || '').trim();
+  var parts = [];
+  REP_PROBLEMS.forEach(function(p){
+    if (list.indexOf(p) < 0) return;
+    if (p === '其他') parts.push(note ? ('其他：' + note) : '其他');
+    else parts.push(p);
+  });
+  return parts.join('、');
+}
+
+/* 编辑时预选的选项（旧记录归到"其他"） */
+function repProblemsForEdit(r){
+  if (r && r.problems && r.problems.length) return r.problems.slice();
+  if (r && r.problem && String(r.problem).trim()) return ['其他'];
+  return [];
+}
+/* 编辑时"其他"的文本（旧记录用原自由文本回填） */
+function repOtherForEdit(r){
+  if (!r) return '';
+  if (r.problemOther) return r.problemOther;
+  if (!(r.problems && r.problems.length) && r.problem) return String(r.problem);
+  return '';
+}
+
+/* 生成勾选项 HTML。mode='add' 用于新增对话框，'edit' 用于行内编辑 */
+function problemChecksHtml(selected, mode, L){
+  selected = selected || [];
+  return '<div class="rp-grid">' + REP_PROBLEMS.map(function(p){
+    var on = selected.indexOf(p) >= 0;
+    var handler = (mode === 'edit')
+      ? 'rpEditToggle(' + L + ',this.value,this.checked,this)'
+      : 'rpToggle(this)';
+    return '<label class="rp-item' + (on ? ' on' : '') + '">'
+      + '<input type="checkbox" class="rp-cb" value="' + esc(p) + '"' + (on ? ' checked' : '')
+      + ' onchange="' + handler + '"> ' + esc(p) + '</label>';
+  }).join('') + '</div>';
+}
+
+/* 新增对话框：勾选时同步"其他"输入框 */
+function rpToggle(el){
+  if (el && el.parentNode) el.parentNode.classList.toggle('on', el.checked);
+  if (el && el.value === '其他'){
+    var wrap = document.getElementById('npOtherWrap');
+    if (wrap){
+      wrap.style.display = el.checked ? 'block' : 'none';
+      if (el.checked){
+        setTimeout(function(){ var t = document.getElementById('npOtherText'); if (t) t.focus(); }, 40);
+      }
+    }
+  }
+}
+
+/* 行内编辑：勾选后直接存，不重画页面（避免输入框失去焦点） */
+function rpEditToggle(labId, repId, label, checked, el){
+  var lab = findLab(labId); if (!lab) return;
+  var r = (lab.repairs || []).filter(function(x){ return x.id === repId; })[0];
+  if (!r) return;
+  /* 旧记录首次编辑时迁移为结构化数据 */
+  if (!r.problems){
+    r.problems = (r.problem && String(r.problem).trim()) ? ['其他'] : [];
+    if (!r.problemOther && r.problem) r.problemOther = String(r.problem);
+    delete r.problem;
+  }
+  var i = r.problems.indexOf(label);
+  if (checked && i < 0) r.problems.push(label);
+  if (!checked && i >= 0) r.problems.splice(i, 1);
+  save();
+  if (el && el.parentNode) el.parentNode.classList.toggle('on', checked);
+  if (label === '其他'){
+    var wrap = document.getElementById('rpOtherWrap_' + repId);
+    if (wrap){
+      wrap.style.display = checked ? 'block' : 'none';
+      if (checked){
+        setTimeout(function(){ var t = document.getElementById('rpOtherText_' + repId); if (t) t.focus(); }, 40);
+      }
+    }
+  }
+}
+/* 行内编辑："其他"的描述 */
+function rpSetOther(labId, repId, text){
+  var lab = findLab(labId); if (!lab) return;
+  var r = (lab.repairs || []).filter(function(x){ return x.id === repId; })[0];
+  if (!r) return;
+  if (!r.problems){
+    r.problems = (r.problem && String(r.problem).trim()) ? ['其他'] : [];
+    if (!r.problemOther && r.problem) r.problemOther = String(r.problem);
+    delete r.problem;
+  }
+  r.problemOther = String(text || '').trim();
+  save();
+}
+
+/* ============================================================
+   路由：主页 / 实验室详情
+   ============================================================ */
+var CUR = null;   /* 当前进入的实验室 id */
+
+function goHome(){ CUR=null; render(); window.scrollTo(0,0); }
+function openLab(id){ CUR=id; render(); window.scrollTo(0,0); }
+
+function render(){
+  if (CUR) renderLab(); else renderHome();
+}
+
+/* ============================================================
+   主页
+   ============================================================ */
+var HOME_VIEW = 'list';      /* list = 实验室列表；matrix = 日程总表 */
+function setHomeView(v){ HOME_VIEW = v; render(); window.scrollTo(0,0); }
+function renderHome(){
+  $('#btnBack').style.display = 'none';
+  $('#title').textContent = '人工智能与软件学院实验室管理系统';
+  ttInit();
+  var totalRep = 0, pendingAll = [];
+  DB.labs.forEach(function(lab){
+    (lab.repairs||[]).forEach(function(r){
+      totalRep++;
+      if (repPending(r)) pendingAll.push({ lab:lab, r:r });
+    });
+  });
+  $('#sub').textContent = DB.labs.length + ' 个实验室 · ' + totalRep + ' 条报修';
+  $('#sub').className = 'sub';
+
+  var h = '';
+
+  /* 视图切换：实验室列表 / 日程总表 */
+  h += '<div class="vtabs">'
+    + '<button class="' + (HOME_VIEW==='list'?'on':'') + '" onclick="setHomeView(\'list\')">实验室列表</button>'
+    + '<button class="' + (HOME_VIEW==='matrix'?'on':'') + '" onclick="setHomeView(\'matrix\')">日程总表</button>'
+    + '</div>';
+
+  if (HOME_VIEW === 'matrix'){
+    /* 未申报提醒在日程表视图下也保留（很重要，别弄丢） */
+    if (pendingAll.length){
+      h += '<div class="alert"><div class="t">⚠ 有 ' + pendingAll.length + ' 条报修还没申报</div><ul>';
+      pendingAll.forEach(function(x){
+        h += '<li><b>' + esc(x.lab.id) + '实验室</b>：' + esc(x.r.machine) + ' 报修未申报'
+           + '（' + esc(repProblemText(x.r) || '未填写问题') + '）'
+           + ' <button class="btn sm ghost" onclick="markDeclared(\'' + esc(x.lab.id) + '\',\'' + esc(x.r.id) + '\')">标记为已申报</button></li>';
+      });
+      h += '</ul></div>';
+    }
+    h += renderMatrix();
+    h += '<div class="card"><h2>设置</h2><div class="row-btns">'
+       + '<button class="btn ghost" onclick="dlgSemester()">填本学期第一周周一</button>'
+       + '<button class="btn ghost" onclick="dlgImportCourse(\'\')">导入课表文件</button>'
+       + '</div>'
+       + '<div class="muted" style="margin-top:10px">数据更新于 ' + esc(DB.updated || '—') + '</div></div>';
+    $('#app').innerHTML = h;
+    return;
+  }
+
+  /* 未申报提醒：必须写明是哪一条，并带实验室编号 */
+  if (pendingAll.length){
+    h += '<div class="alert"><div class="t">⚠ 有 ' + pendingAll.length + ' 条报修还没申报</div><ul>';
+    pendingAll.forEach(function(x){
+      h += '<li><b>' + esc(x.lab.id) + '实验室</b>：' + esc(x.r.machine) + ' 报修未申报'
+         + '（' + esc(repProblemText(x.r) || '未填写问题') + '）'
+         + ' <button class="btn sm ghost" onclick="markDeclared(\'' + esc(x.lab.id) + '\',\'' + esc(x.r.id) + '\')">标记为已申报</button></li>';
+    });
+    h += '</ul></div>';
+  }
+
+  if (!DB.labs.length){
+    h += '<div class="card"><div class="empty">还没有实验室，点下面的按钮添加</div></div>';
+  } else {
+    DB.labs.forEach(function(lab){
+      var pend = (lab.repairs||[]).filter(repPending).length;
+      var open = (lab.repairs||[]).filter(repOpen).length;
+      var done = (lab.repairs||[]).filter(repDone).length;
+      var tags = [];
+      if (open) tags.push('<span class="tag r">' + open + ' 台待维修</span>');
+      if (pend) tags.push('<span class="tag a">' + pend + ' 条未申报</span>');
+      if (!open && !pend && (lab.repairs||[]).length) tags.push('<span class="tag g">无待办</span>');
+      if (!(lab.repairs||[]).length) tags.push('<span class="tag gy">暂无报修</span>');
+
+      var ncourse = (lab.courses || []).length;
+      h += '<div class="lab">'
+        + '<div class="no" onclick="openLab(\'' + esc(lab.id) + '\')" style="cursor:pointer">' + esc(lab.id) + '</div>'
+        + '<div class="info" onclick="openLab(\'' + esc(lab.id) + '\')" style="cursor:pointer">'
+        + '<div class="nm">' + esc(lab.name || '（未填名称）') + '</div>'
+        + '<div class="dt">' + (lab.hw && lab.hw.length ? esc((lab.hw[0]||{}).config || '') : '<span class="muted">未填配置</span>')
+        + '<span class="sep">·</span>' + (lab.sw ? lab.sw.length : 0) + ' 个软件'
+        + '<span class="sep">·</span>' + (lab.repairs ? lab.repairs.length : 0) + ' 条报修'
+        + '<span class="sep">·</span>' + (ncourse ? ('课表 ' + ncourse + ' 条') : '<span class="nocourse">还没导课表</span>')
+        + '</div>'
+        + '<div class="card-btns">'
+        + '<button class="mini" onclick="openLab(\'' + esc(lab.id) + '\');setLabTab(\'sched\')">看课表</button>'
+        + '<button class="mini' + (ncourse ? '' : ' warn') + '" onclick="dlgImportCourse(\'' + esc(lab.id) + '\')">导入课表</button>'
+        + '<button class="mini" onclick="openLab(\'' + esc(lab.id) + '\')">资产/报修</button>'
+        + '</div>'
+        + '</div>'
+        + '<div class="tags">' + tags.join('') + '</div>'
+        + '</div>';
+    });
+  }
+
+  h += '<div class="card"><h2>管理<span class="hint">数据存在本机</span></h2>'
+    + '<div class="row-btns">'
+    + '<button class="btn" onclick="dlgAddLab()">+ 新增实验室</button>'
+    + '<button class="btn ghost" onclick="dlgImport()">从 Excel 导入</button>'
+    + '<button class="btn ghost" onclick="dlgImportCourse(\'\')">导入课表文件</button>'
+    + '<button class="btn ghost" onclick="exportRepairs(\'\')">导出报修记录</button>'
+    + '<button class="btn ghost" onclick="dlgBackup()">导出备份</button>'
+    + '<button class="btn ghost" onclick="dlgRestore()">导入备份</button>'
+    + '<button class="btn danger" onclick="dlgReset()">恢复预置数据</button>'
+    + '</div>'
+    + '<div class="alert" style="margin-top:12px;font-size:13px">'
+    + '课表导入：可以点每个实验室卡片上的「<b>导入课表</b>」，'
+    + '也可以点上面的「导入课表文件」一次选多个文件（按课表标题里的房间号自动认实验室）。'
+    + '</div>'
+    + '<div class="muted" style="margin-top:10px">'
+    + '「导出报修记录」是把所有实验室的报修记录汇总成一张 Excel，存到「桌面\\报修记录」文件夹。'
+    + '</div>'
+    + '<div class="muted" style="margin-top:11px">'
+    + '<button class="btn ghost sm" onclick="dlgSemester()" style="margin-right:8px">本学期第一周周一</button>'
+    + '数据更新于 ' + esc(DB.updated || '—') + '　'
+    + '<label style="cursor:pointer"><input type="checkbox" id="editMode"' + (EDIT ? ' checked' : '') + ' onchange="toggleEdit(this.checked)" style="vertical-align:-2px"> 编辑模式</label>'
+    + '</div></div>';
+
+  $('#app').innerHTML = h;
+  /* 恢复勾选状态，避免重画后掉勾 */
+  var cb0 = $('#editMode'); if (cb0) cb0.checked = EDIT;
+}
+
+function markDeclared(labId, repId){
+  var lab = findLab(labId); if (!lab) return;
+  var r = (lab.repairs||[]).filter(function(x){ return x.id===repId; })[0];
+  if (!r) return;
+  r.declared = true;
+  save(); render();
+  toast(labId + '实验室：' + r.machine + ' 已标记为已申报');
+}
+
+/* ============================================================
+   实验室详情
+   ============================================================ */
+var EDIT = false;
+var LAB_TAB = 'asset';       /* asset = 资产配置；sched = 课表 */
+function toggleEdit(on){ EDIT = on; if (CUR) renderLab(); else render(); }
+function setLabTab(t){ LAB_TAB = t; renderLab(); window.scrollTo(0,0); }
+function renderLab(){
+  var lab = findLab(CUR);
+  if (!lab){ goHome(); return; }
+  $('#btnBack').style.display = 'block';
+  /* 大标题保持系统名不变（跑到别的实验室时不会分不清自己在哪个系统里），
+     当前是哪个实验室放在右边徽章上。 */
+  $('#title').textContent = '人工智能与软件学院实验室管理系统';
+  var subEl = $('#sub');
+  subEl.className = 'sub lab';
+  subEl.innerHTML = '<span class="lb-no">' + esc(lab.id) + '</span>' + esc(lab.name || '（未填名称）');
+  ttInit();
+
+  var h = '';
+
+  /* 两个页签：资产配置 / 课表。
+     顺便把「编辑模式」开关也放到这一页 —— 之前只有主页有，
+     进了实验室就找不到那个勾，容易以为没有编辑功能。 */
+  var nc = (lab.courses || []).length;
+  h += '<div class="ltab">'
+    + '<button class="' + (LAB_TAB==='asset'?'on':'') + '" onclick="setLabTab(\'asset\')">资产配置</button>'
+    + '<button class="' + (LAB_TAB==='sched'?'on':'') + '" onclick="setLabTab(\'sched\')">课表' + (nc ? '（' + nc + '）' : '') + '</button>'
+    + '<label class="editmode-lab"><input type="checkbox" id="editMode"' + (EDIT ? ' checked' : '')
+    + ' onchange="toggleEdit(this.checked)"> 编辑模式</label>'
+    + '</div>';
+
+  /* 该实验室的"未维修完毕"提醒 */
+  var open = (lab.repairs||[]).filter(repOpen);
+  var pend = (lab.repairs||[]).filter(repPending);
+  if (open.length){
+    h += '<div class="alert r"><div class="t">⚠ 本实验室有 ' + open.length + ' 台电脑维修未完毕，请检查</div><ul>';
+    open.forEach(function(r){
+      h += '<li><b>' + esc(r.machine) + '</b>　' + esc(repProblemText(r) || '未填写问题')
+         + '　<span class="muted">报修时间 ' + esc(r.time || '未填') + '</span></li>';
+    });
+    h += '</ul></div>';
+  }
+  if (pend.length){
+    h += '<div class="alert"><div class="t">本实验室有 ' + pend.length + ' 条报修还没申报</div><ul>';
+    pend.forEach(function(r){
+      h += '<li><b>' + esc(r.machine) + '</b>　' + esc(repProblemText(r) || '未填写问题')
+         + ' <button class="btn sm ghost" onclick="markDeclared(\'' + esc(lab.id) + '\',\'' + esc(r.id) + '\')">标记为已申报</button></li>';
+    });
+    h += '</ul></div>';
+  }
+
+  if (LAB_TAB === 'sched'){
+    h += renderLabSchedule(lab);
+    $('#app').innerHTML = h;
+    return;
+  }
+
+  /* 一、硬件配置 */
+  h += '<div class="card"><h2>一、硬件配置'
+    + (EDIT ? '<span class="hint">点格子直接改</span>' : '')
+    + '</h2>'
+    + '<div class="tbl-wrap"><table id="tblHW"><thead><tr>'
+    + '<th style="width:22%">项目</th><th style="width:34%">配置</th><th style="width:14%">采购年份</th>'
+    + '<th style="width:16%">保修状态</th><th style="width:10%">数量</th>'
+    + (EDIT ? '<th style="width:4%"></th>' : '') + '</tr></thead><tbody>';
+  (lab.hw||[]).forEach(function(r,i){
+    h += '<tr>'
+      + ed('hw',i,'item',r.item) + ed('hw',i,'config',r.config) + ed('hw',i,'year',r.year)
+      + ed('hw',i,'warranty',r.warranty) + ed('hw',i,'qty',r.qty, 'num')
+      + rowBtns('hw', i)
+      + '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="row-btns">'
+    + '<button class="btn ghost sm" onclick="dlgRow(\'hw\',-1)">＋ 添加一行</button>'
+    + (EDIT ? '<button class="btn ghost sm" onclick="addRow(\'hw\')">在表格里空加一行</button>' : '')
+    + '</div>';
+  h += '</div>';
+
+  /* 二、系统环境 */
+  h += '<div class="card"><h2>二、系统环境</h2>'
+    + '<div class="tbl-wrap"><table><thead><tr>'
+    + '<th style="width:28%">项目</th><th>版本/配置</th>'
+    + (EDIT ? '<th style="width:5%"></th>' : '') + '</tr></thead><tbody>';
+  (lab.env||[]).forEach(function(r,i){
+    h += '<tr>' + ed('env',i,'item',r.item) + ed('env',i,'config',r.config)
+      + rowBtns('env', i) + '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="row-btns">'
+    + '<button class="btn ghost sm" onclick="dlgRow(\'env\',-1)">＋ 添加一行</button>'
+    + (EDIT ? '<button class="btn ghost sm" onclick="addRow(\'env\')">在表格里空加一行</button>' : '')
+    + '</div>';
+  h += '</div>';
+
+  /* 三、软件清单。软件是"这学期装一个、下学期装一个"，所以要能随时单独加/改，
+     不必先去主页勾编辑模式。 */
+  h += '<div class="card"><h2>三、软件清单<span class="hint">' + (lab.sw||[]).length + ' 个</span></h2>'
+    + '<div class="tbl-wrap"><table><thead><tr>'
+    + '<th style="width:18%">类别</th><th style="width:34%">软件名称</th>'
+    + '<th style="width:16%">版本</th><th>备注</th>'
+    + '<th style="width:88px"></th></tr></thead><tbody>';
+  if (!(lab.sw||[]).length){
+    h += '<tr><td colspan="5" style="text-align:center;color:var(--gray-l);padding:16px">还没有软件，点下面的「＋ 添加软件」</td></tr>';
+  }
+  (lab.sw||[]).forEach(function(r,i){
+    h += '<tr>' + ed('sw',i,'cat',r.cat) + ed('sw',i,'name',r.name) + ed('sw',i,'ver',r.ver) + ed('sw',i,'note',r.note)
+      + rowBtns('sw', i) + '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="row-btns">'
+    + '<button class="btn" onclick="dlgRow(\'sw\',-1)">＋ 添加软件</button>'
+    + (EDIT ? '<button class="btn ghost sm" onclick="addRow(\'sw\')">在表格里空加一行</button>' : '')
+    + '</div>';
+  h += '</div>';
+
+  /* 报修单 */
+  var reps = (lab.repairs||[]).slice().sort(function(a,b){
+    var d = repState(b).localeCompare(repState(a));
+    return String(b.time||'').localeCompare(String(a.time||''));
+  });
+  h += '<div class="card"><h2>报修记录<span class="hint">' + reps.length + ' 条</span></h2>';
+  if (!reps.length){
+    h += '<div class="empty" style="padding:22px">这个实验室还没有报修记录</div>';
+  } else {
+    reps.forEach(function(r){
+      var st = repState(r);
+      var cls = st==='done' ? 'done' : (st==='pending' ? 'pending' : 'open');
+      var tag = st==='done' ? '<span class="tag g">已维修完毕</span>'
+              : (st==='pending' ? '<span class="tag a">未申报</span>' : '<span class="tag r">已申报 · 未修完</span>');
+      h += '<div class="rep ' + cls + '" id="rep-' + esc(r.id) + '">'
+        + '<div class="rep-h"><span class="m">' + esc(r.machine) + '</span>' + tag
+        + '<span class="tm">报修时间 ' + esc(r.time || '未填') + '</span></div>'
+        + (EDIT ? edRep(r, lab.id) : '<div class="rep-q">' + esc(repProblemText(r) || '（未填写问题）') + '</div>')
+        + (EDIT ? '' : repStatusHtml(r, lab.id))
+        + (EDIT ? '<div class="row-btns"><button class="btn danger sm" onclick="delRep(\'' + esc(lab.id) + '\',\'' + esc(r.id) + '\')">删除这条</button></div>' : '')
+        + '</div>';
+    });
+  }
+  h += '<div class="row-btns">'
+    + '<button class="btn" onclick="dlgAddRep(\'' + esc(lab.id) + '\')">+ 添加报修记录</button>'
+    + (reps.length ? '<button class="btn ghost" onclick="exportRepairs(\'' + esc(lab.id) + '\')">导出为 Excel</button>' : '')
+    + '</div>';
+  if (reps.length){
+    h += '<div class="muted" style="margin-top:8px">'
+      + '导出会存到「桌面\\报修记录」文件夹里。第一次会弹出窗口让你确认位置，之后默认用同一个；'
+      + '想换位置点 <a href="javascript:resetExportDir()" style="color:var(--blue)">这里</a>。'
+      + '</div>';
+  }
+  h += '</div>';
+
+  /* 实验室自身管理 */
+  h += '<div class="card"><h2>实验室设置</h2><div class="row-btns">'
+    + '<button class="btn ghost" onclick="dlgEditLab(\'' + esc(lab.id) + '\')">改名称 / 编号</button>'
+    + '<button class="btn ghost" onclick="dlgImport(\'' + esc(lab.id) + '\')">用 Excel 覆盖配置</button>'
+    + '<button class="btn danger" onclick="dlgDelLab(\'' + esc(lab.id) + '\')">删除这个实验室</button>'
+    + '</div></div>';
+
+  $('#app').innerHTML = h;
+  /* 恢复编辑模式复选框状态。不恢复的话，加一条数据后重画页面，
+     "编辑模式"的勾会掉，得重新勾一次 —— 连续加几条时很烦。 */
+  var cb = $('#editMode'); if (cb) cb.checked = EDIT;
+}
+
+function repStatusHtml(r, labId){
+  return '<div class="rep-s">'
+    + '<label><input type="checkbox" ' + (r.declared ? 'checked' : '') + ' onchange="setRep(\'' + esc(labId) + '\',\'' + esc(r.id) + '\',\'declared\',this.checked)"> 已申报</label>'
+    + '<label><input type="checkbox" ' + (r.fixed ? 'checked' : '') + ' onchange="setRep(\'' + esc(labId) + '\',\'' + esc(r.id) + '\',\'fixed\',this.checked)"> 已维修完毕</label>'
+    + '</div>';
+}
+function edRep(r, labId){
+  var L = "'" + esc(labId) + "','" + esc(r.id) + "'";
+  return '<div class="two">'
+    + '<label class="f"><span class="k">报修时间</span>'
+    + '<input type="text" value="' + esc(r.time||'') + '" onchange="setRepField(' + L + ',\'time\',this.value)" placeholder="如 2026-10-15"></label>'
+    + '<label class="f"><span class="k">电脑编号</span>'
+    + '<input type="text" value="' + esc(r.machine||'') + '" onchange="setRepField(' + L + ',\'machine\',this.value)" placeholder="如 12号机"></label>'
+    + '</div>'
+    + '<div class="f"><span class="k">报修问题（可多选）</span>'
+    + problemChecksHtml(repProblemsForEdit(r), 'edit', L)
+    + '</div>'
+    + '<label class="f" id="rpOtherWrap_' + esc(r.id) + '" style="display:'
+    + (repProblemsForEdit(r).indexOf('其他') >= 0 ? 'block' : 'none') + '">'
+    + '<span class="k">「其他」的具体问题</span>'
+    + '<input type="text" id="rpOtherText_' + esc(r.id) + '" value="' + esc(repOtherForEdit(r))
+    + '" onchange="rpSetOther(' + L + ',this.value)" placeholder="请简单描述"></label>'
+    + '<div class="rep-s">'
+    + '<label><input type="checkbox" ' + (r.declared?'checked':'') + ' onchange="setRepField(' + L + ',\'declared\',this.checked)"> 已申报</label>'
+    + '<label><input type="checkbox" ' + (r.fixed?'checked':'') + ' onchange="setRepField(' + L + ',\'fixed\',this.checked)"> 已维修完毕</label>'
+    + '</div>';
+}
+/* 生成一个可编辑单元格 / 普通单元格 */
+function ed(sect,i,key,val,cls){
+  var v = esc(val==null?'':val);
+  if (EDIT){
+    return '<td class="' + (cls||'') + '" contenteditable="true" data-s="' + sect + '" data-i="' + i + '" '
+      + 'data-k="' + key + '" onblur="cellEdit(this)">' + v + '</td>';
+  }
+  return '<td class="' + (cls||'') + '">' + (v===''?'<span class="muted">·</span>':v) + '</td>';
+}
+/* 每行的「改 / 删」按钮。两种模式下都显示 —— 这样不必先去主页勾编辑模式。 */
+function rowBtns(sect, i){
+  return '<td class="rowbtns">'
+    + '<button class="mini" onclick="dlgRow(\'' + sect + '\',' + i + ')" title="修改这一行">改</button>'
+    + '<button class="mini delmini" onclick="delRow(\'' + sect + '\',' + i + ')" title="删除这一行">删</button>'
+    + '</td>';
+}
+
+/* 单行编辑对话框。sect: hw / env / sw ；idx:-1 表示新增 */
+var ROW_FIELDS = {
+  hw:  [['item','项目','如 CPU'],['config','配置','如 Intel(R) Core(TM) i7-10700'],
+        ['year','采购年份','如 2020'],['warranty','保修状态','如 过保'],['qty','数量','如 64台']],
+  env: [['item','项目','如 操作系统'],['config','版本/配置','如 Windows10-64']],
+  sw:  [['cat','类别','如 开发工具'],['name','软件名称','如 PyCharm'],
+        ['ver','版本','如 2026.1'],['note','备注','（可留空）']]
+};
+var ROW_TITLE = { hw:'硬件配置', env:'系统环境', sw:'软件清单' };
+var ROW_NEW_DEF = {
+  hw:  { item:'', config:'', year:'', warranty:'', qty:'' },
+  env: { item:'', config:'' },
+  sw:  { cat:'', name:'', ver:'', note:'' }
+};
+function dlgRow(sect, idx){
+  var lab = findLab(CUR);
+  if (!lab) return;
+  var isNew = (idx < 0);
+  var row = isNew ? Object.assign({}, ROW_NEW_DEF[sect]) : lab[sect][idx];
+  if (!row) return;
+  var fields = ROW_FIELDS[sect];
+  var html = '<h3>' + (isNew ? '添加' : '修改') + ROW_TITLE[sect] + '</h3>'
+    + '<div class="st">' + esc(lab.id) + ' ' + esc(lab.name||'') + '</div>';
+  fields.forEach(function(f, k){
+    var key = f[0], label = f[1], ph = f[2];
+    var val = row[key] == null ? '' : row[key];
+    html += '<label class="f"><span class="k">' + esc(label) + '</span>'
+      + '<input type="text" id="rowF' + k + '" value="' + esc(val) + '" placeholder="' + esc(ph) + '"></label>';
+  });
+  html += '<div class="muted">按学校台账原样填，程序不会替你改写内容。</div>'
+    + '<div class="row-btns"><button class="btn" onclick="saveRow(\'' + sect + '\',' + idx + ')">'
+    + (isNew ? '添加' : '保存') + '</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>';
+  openDlg(html);
+  setTimeout(function(){ var el = $('#rowF0'); if (el) el.focus(); }, 60);
+}
+function saveRow(sect, idx){
+  var lab = findLab(CUR);
+  if (!lab) return;
+  var fields = ROW_FIELDS[sect], row = {};
+  var firstEmpty = false;
+  fields.forEach(function(f, k){
+    var el = $('#rowF' + k);
+    var v = el ? String(el.value || '').trim() : '';
+    row[f[0]] = v;
+  });
+  /* 至少要有第一个字段（项目 / 类别） */
+  if (!row[fields[0][0]]){ toast('请填「' + fields[0][1] + '」'); return; }
+  if (idx < 0){
+    lab[sect].push(row);
+    save(); closeDlg();
+    renderLab();
+    toast('已添加：' + row[fields[0][0]]);
+  } else {
+    lab[sect][idx] = row;
+    save(); closeDlg();
+    renderLab();
+    toast('已保存');
+  }
+}
+
+function cellEdit(td){
+  var lab = findLab(CUR); if (!lab) return;
+  var s = td.dataset.s, i = +td.dataset.i, k = td.dataset.k;
+  var val = td.innerText.replace(/\u00a0/g,' ').trim();
+  if (!lab[s] || !lab[s][i]) return;
+  if (lab[s][i][k] === val) return;
+  lab[s][i][k] = val;
+  save();
+  toast('已保存');
+}
+
+function addRow(sect){
+  var lab = findLab(CUR); if (!lab) return;
+  if (sect==='hw')      lab.hw.push({ item:'', config:'', year:'', warranty:'', qty:'' });
+  else if (sect==='env') lab.env.push({ item:'', config:'' });
+  else if (sect==='sw')  lab.sw.push({ cat:'', name:'', ver:'', note:'' });
+  save(); EDIT = true; renderLab();
+}
+function delRow(sect,i){
+  var lab = findLab(CUR); if (!lab) return;
+  if (!confirm('删除这一行？')) return;
+  lab[sect].splice(i,1); save(); renderLab();
+}
+function setRep(labId, repId, key, val){
+  var lab = findLab(labId); if (!lab) return;
+  var r = lab.repairs.filter(function(x){ return x.id===repId; })[0];
+  if (!r) return;
+  r[key] = !!val;
+  save(); render();
+  toast(key==='declared' ? (val?'已标记为已申报':'已取消"已申报"') : (val?'已标记为维修完毕':'已取消"维修完毕"'));
+}
+/* 找到某条报修属于哪个实验室。
+   不依赖全局 CUR —— 否则调用时机不对时会静默失败（改不动数据，还不报错）。 */
+function labOfRep(repId, hintLabId){
+  if (hintLabId){ var l0 = findLab(hintLabId); if (l0) return l0; }
+  if (CUR){ var l1 = findLab(CUR); if (l1) return l1; }
+  for (var i=0;i<DB.labs.length;i++){
+    var rs = DB.labs[i].repairs || [];
+    for (var j=0;j<rs.length;j++) if (rs[j].id===repId) return DB.labs[i];
+  }
+  return null;
+}
+function setRepField(repId, key, val, labId){
+  var lab = labOfRep(repId, labId);
+  if (!lab){ toast('没找到这条报修记录'); return; }
+  var r = lab.repairs.filter(function(x){ return x.id===repId; })[0];
+  if (!r){ toast('没找到这条报修记录'); return; }
+  r[key] = (key==='declared'||key==='fixed') ? !!val : String(val||'').trim();
+  save();
+  /* 同步刷新当前页面（不管在主页还是详情页） */
+  if (CUR) renderLab(); else renderHome();
+  toast('已保存');
+}
+function delRep(labId, repId){
+  var lab = findLab(labId); if (!lab) return;
+  if (!confirm('删除这条报修记录？')) return;
+  lab.repairs = lab.repairs.filter(function(x){ return x.id!==repId; });
+  save(); renderLab(); toast('已删除');
+}
+
+/* ============================================================
+   对话框
+   ============================================================ */
+function openDlg(html){ $('#dlg').innerHTML = html; $('#mask').classList.add('on'); }
+function closeDlg(){ $('#mask').classList.remove('on'); }
+$('#mask').onclick = function(e){ if (e.target.id==='mask') closeDlg(); };
+
+function newId(){ return 'r' + Date.now() + Math.floor(Math.random()*1000); }
+
+function dlgAddRep(labId){
+  openDlg('<h3>添加报修记录</h3><div class="st">' + esc(labId) + ' 实验室</div>'
+    + '<label class="f"><span class="k">报修时间</span><input type="text" id="npTime" value="' + today() + '" placeholder="如 2026-10-15"></label>'
+    + '<label class="f"><span class="k">电脑编号</span><input type="text" id="npMach" placeholder="如 12号机"></label>'
+    + '<div class="f"><span class="k">报修问题（可多选）</span>'
+    + problemChecksHtml([], 'add')
+    + '</div>'
+    + '<label class="f" id="npOtherWrap" style="display:none">'
+    + '<span class="k">「其他」的具体问题</span>'
+    + '<input type="text" id="npOtherText" placeholder="请简单描述具体问题"></label>'
+    + '<div class="rep-s" style="margin-bottom:6px">'
+    + '<label><input type="checkbox" id="npDec"> 已申报</label>'
+    + '<label><input type="checkbox" id="npFix"> 已维修完毕</label></div>'
+    + '<div class="row-btns"><button class="btn" onclick="saveRep(\'' + esc(labId) + '\')">保存</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+  setTimeout(function(){ var e=$('#npMach'); if (e) e.focus(); }, 50);
+}
+function saveRep(labId){
+  var lab = findLab(labId); if (!lab) return;
+  var machine = $('#npMach').value.trim();
+  if (!machine){ toast('请填电脑编号'); return; }
+
+  /* 收集勾选的报修问题（按固定顺序） */
+  var picked = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.rp-cb'), function(b){
+    if (b.checked) picked.push(b.value);
+  });
+  var problems = REP_PROBLEMS.filter(function(p){ return picked.indexOf(p) >= 0; });
+  if (!problems.length){ toast('请至少勾选一个报修问题'); return; }
+
+  var otherText = '';
+  if (problems.indexOf('其他') >= 0){
+    var el = document.getElementById('npOtherText');
+    otherText = el ? el.value.trim() : '';
+    if (!otherText){ toast('勾了「其他」，请填具体问题'); return; }
+  }
+
+  lab.repairs.push({
+    id: newId(),
+    time: $('#npTime').value.trim() || today(),
+    machine: machine,
+    problems: problems,
+    problemOther: otherText,
+    declared: $('#npDec').checked,
+    fixed: $('#npFix').checked
+  });
+  save(); closeDlg(); renderLab();
+  toast('已添加报修记录：' + machine);
+}
+
+function dlgAddLab(){
+  openDlg('<h3>新增实验室</h3><div class="st">会自动生成一份空白的配置表单</div>'
+    + '<label class="f"><span class="k">实验室编号（房间号）</span><input type="text" id="nlId" placeholder="如 401"></label>'
+    + '<label class="f"><span class="k">实验室名称</span><input type="text" id="nlName" placeholder="如 软件实验室"></label>'
+    + '<div class="row-btns"><button class="btn" onclick="saveLab()">创建</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+  setTimeout(function(){ var e=$('#nlId'); if (e) e.focus(); }, 50);
+}
+function saveLab(){
+  var id = $('#nlId').value.trim();
+  var name = $('#nlName').value.trim();
+  if (!id){ toast('请填实验室编号'); return; }
+  if (findLab(id)){ toast('编号 ' + id + ' 已存在'); return; }
+  DB.labs.push({
+    id: id, name: name,
+    hw: [
+      { item:'CPU', config:'', year:'', warranty:'', qty:'' },
+      { item:'内存', config:'', year:'', warranty:'', qty:'' },
+      { item:'硬盘', config:'', year:'', warranty:'', qty:'' },
+      { item:'网络', config:'', year:'', warranty:'', qty:'' }
+    ],
+    env: [
+      { item:'操作系统', config:'' },
+      { item:'还原保护', config:'' },
+      { item:'网络配置', config:'' }
+    ],
+    sw: [],
+    repairs: []
+  });
+  save(); closeDlg();
+  DB.labs.sort(function(a,b){ return String(a.id).localeCompare(String(b.id),'zh'); });
+  openLab(id);
+  toast('已创建实验室 ' + id + '，去填配置吧');
+}
+function dlgEditLab(labId){
+  var lab = findLab(labId); if (!lab) return;
+  openDlg('<h3>修改实验室</h3><div class="st">修改编号可能影响你对数据的记忆，建议只改名称</div>'
+    + '<label class="f"><span class="k">实验室编号</span><input type="text" id="elId" value="' + esc(lab.id) + '"></label>'
+    + '<label class="f"><span class="k">实验室名称</span><input type="text" id="elName" value="' + esc(lab.name||'') + '"></label>'
+    + '<div class="row-btns"><button class="btn" onclick="doEditLab(\'' + esc(labId) + '\')">保存</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+}
+function doEditLab(oldId){
+  var lab = findLab(oldId); if (!lab) return;
+  var nid = $('#elId').value.trim();
+  var nm = $('#elName').value.trim();
+  if (!nid){ toast('编号不能为空'); return; }
+  if (nid!==oldId && findLab(nid)){ toast('编号 ' + nid + ' 已存在'); return; }
+  lab.id = nid; lab.name = nm;
+  save(); closeDlg(); CUR = nid; render();
+  toast('已保存');
+}
+function dlgDelLab(labId){
+  var lab = findLab(labId); if (!lab) return;
+  openDlg('<h3>删除实验室</h3>'
+    + '<div class="alert r" style="margin:0 0 12px"><b>' + esc(lab.id) + ' ' + esc(lab.name||'') + '</b><br>'
+    + '它的配置表单和 ' + (lab.repairs||[]).length + ' 条报修记录会一起删除，无法恢复。</div>'
+    + '<div class="row-btns"><button class="btn danger" onclick="doDelLab(\'' + esc(labId) + '\')">确认删除</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+}
+function doDelLab(labId){
+  DB.labs = DB.labs.filter(function(l){ return l.id!==labId; });
+  save(); closeDlg(); goHome(); toast('已删除实验室 ' + labId);
+}
+
+/* ============================================================
+   报修记录 → 导出为 Excel（.xlsx）
+   ------------------------------------------------------------
+   没有用任何第三方库：.xlsx 本质是一个 ZIP，里面装几个 XML，
+   这里自己拼出来，且用 ZIP 的"存储"模式（不压缩）——这样连压缩接口
+   都不需要，任何浏览器都能跑。已用 openpyxl 和 WPS 双重验证可正常打开。
+
+   排序：纯按报修时间，最新的在前。
+   ============================================================ */
+
+/* ---------- CRC32（ZIP 要求每个文件带校验值） ---------- */
+var CRC_TABLE = null;
+function crc32(bytes){
+  if (!CRC_TABLE){
+    CRC_TABLE = new Int32Array(256);
+    for (var n = 0; n < 256; n++){
+      var c = n;
+      for (var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      CRC_TABLE[n] = c;
+    }
+  }
+  var crc = 0xFFFFFFFF;
+  for (var i = 0; i < bytes.length; i++) crc = CRC_TABLE[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+/* ---------- 极简 ZIP 打包（全部存储模式，method=0） ---------- */
+function zipStore(files){
+  var enc = new TextEncoder();
+  var parts = [], central = [], offset = 0;
+
+  files.forEach(function(f){
+    var nameBytes = enc.encode(f.name);
+    var data = f.data;
+    var crc = crc32(data);
+
+    var lh = new Uint8Array(30 + nameBytes.length);
+    var dv = new DataView(lh.buffer);
+    dv.setUint32(0, 0x04034B50, true);   /* PK\x03\x04 */
+    dv.setUint16(4, 20, true);           /* 解压所需版本 */
+    dv.setUint16(6, 0x0800, true);       /* bit11: 文件名用 UTF-8 */
+    dv.setUint16(8, 0, true);            /* 压缩方式 0 = 存储 */
+    dv.setUint16(10, 0, true);           /* 时间 */
+    dv.setUint16(12, 0x21, true);        /* 日期 */
+    dv.setUint32(14, crc, true);
+    dv.setUint32(18, data.length, true);
+    dv.setUint32(22, data.length, true);
+    dv.setUint16(26, nameBytes.length, true);
+    dv.setUint16(28, 0, true);
+    lh.set(nameBytes, 30);
+    parts.push(lh, data);
+
+    var cd = new Uint8Array(46 + nameBytes.length);
+    var dv2 = new DataView(cd.buffer);
+    dv2.setUint32(0, 0x02014B50, true);  /* PK\x01\x02 */
+    dv2.setUint16(4, 20, true);
+    dv2.setUint16(6, 20, true);
+    dv2.setUint16(8, 0x0800, true);
+    dv2.setUint16(10, 0, true);
+    dv2.setUint16(12, 0, true);
+    dv2.setUint16(14, 0x21, true);
+    dv2.setUint32(16, crc, true);
+    dv2.setUint32(20, data.length, true);
+    dv2.setUint32(24, data.length, true);
+    dv2.setUint16(28, nameBytes.length, true);
+    dv2.setUint16(30, 0, true);
+    dv2.setUint16(32, 0, true);
+    dv2.setUint16(34, 0, true);
+    dv2.setUint16(36, 0, true);
+    dv2.setUint32(38, 0, true);
+    dv2.setUint32(42, offset, true);
+    cd.set(nameBytes, 46);
+    central.push(cd);
+
+    offset += lh.length + data.length;
+  });
+
+  var centralStart = offset, centralSize = 0;
+  central.forEach(function(c){ centralSize += c.length; });
+  var eocd = new Uint8Array(22);
+  var dv3 = new DataView(eocd.buffer);
+  dv3.setUint32(0, 0x06054B50, true);    /* PK\x05\x06 */
+  dv3.setUint16(8, files.length, true);
+  dv3.setUint16(10, files.length, true);
+  dv3.setUint32(12, centralSize, true);
+  dv3.setUint32(16, centralStart, true);
+
+  var all = parts.concat(central).concat([eocd]);
+  var total = 0;
+  all.forEach(function(x){ total += x.length; });
+  var out = new Uint8Array(total), pos = 0;
+  all.forEach(function(x){ out.set(x, pos); pos += x.length; });
+  return out;
+}
+
+/* ---------- XML / 列名 小工具 ---------- */
+function xmlEsc(v){
+  return String(v == null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+function colName(n){
+  var t = '';
+  while (n > 0){ var m = (n - 1) % 26; t = String.fromCharCode(65 + m) + t; n = Math.floor((n - 1) / 26); }
+  return t;
+}
+
+/* ---------- 把二维数组写成 xlsx 字节 ---------- */
+function buildXlsx(sheetName, rows, colWidths){
+  var enc = new TextEncoder();
+  var NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main';
+
+  var sheetRows = rows.map(function(row, ri){
+    var cells = row.map(function(val, ci){
+      var ref = colName(ci + 1) + (ri + 1);
+      if (val == null || val === '') return '<c r="' + ref + '"/>';
+      var style = ri === 0 ? ' s="1"' : '';
+      var txt = String(val);
+      var preserve = /(^\s|\s$)/.test(txt) ? ' xml:space="preserve"' : '';
+      return '<c r="' + ref + '"' + style + ' t="inlineStr"><is><t' + preserve + '>' + xmlEsc(txt) + '</t></is></c>';
+    }).join('');
+    return '<row r="' + (ri + 1) + '">' + cells + '</row>';
+  }).join('');
+
+  var colsXml = '';
+  if (colWidths && colWidths.length){
+    colsXml = '<cols>' + colWidths.map(function(w, i){
+      return '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>';
+    }).join('') + '</cols>';
+  }
+
+  var sheet = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<worksheet xmlns="' + NS + '">' + colsXml + '<sheetData>' + sheetRows + '</sheetData></worksheet>';
+
+  var contentTypes = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+    + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+    + '<Default Extension="xml" ContentType="application/xml"/>'
+    + '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'
+    + '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
+    + '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
+    + '</Types>';
+
+  var rootRels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>'
+    + '</Relationships>';
+
+  var workbook = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<workbook xmlns="' + NS + '" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+    + '<sheets><sheet name="' + xmlEsc(sheetName) + '" sheetId="1" r:id="rId1"/></sheets></workbook>';
+
+  var wbRels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>'
+    + '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
+    + '</Relationships>';
+
+  /* 两种字体（常规 + 表头加粗）、两种填充（无 + 表头底色） */
+  var styles = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    + '<styleSheet xmlns="' + NS + '">'
+    + '<fonts count="2"><font><sz val="11"/><name val="宋体"/></font><font><b/><sz val="11"/><name val="宋体"/></font></fonts>'
+    + '<fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>'
+    + '<fill><patternFill patternType="solid"><fgColor rgb="FFE8F0FB"/><bgColor indexed="64"/></patternFill></fill></fills>'
+    + '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>'
+    + '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
+    + '<cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>'
+    + '<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/></cellXfs>'
+    + '<cellStyles count="1"><cellStyle name="常规" xfId="0" builtinId="0"/></cellStyles>'
+    + '</styleSheet>';
+
+  return zipStore([
+    { name: '[Content_Types].xml',        data: enc.encode(contentTypes) },
+    { name: '_rels/.rels',                data: enc.encode(rootRels) },
+    { name: 'xl/workbook.xml',            data: enc.encode(workbook) },
+    { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(wbRels) },
+    { name: 'xl/styles.xml',              data: enc.encode(styles) },
+    { name: 'xl/worksheets/sheet1.xml',   data: enc.encode(sheet) }
+  ]);
+}
+
+/* ---------- 报修状态文字 ---------- */
+function repStateText(r){
+  if (r.fixed) return '已维修完毕';
+  if (r.declared) return '已申报·未维修完毕';
+  return '未申报';
+}
+
+/* ---------- 报修时间排序键（yyyymmdd 数字，便于比较） ---------- */
+function timeSortKey(t){
+  var s = String(t == null ? '' : t).trim();
+  var m = /(\d{4})\D(\d{1,2})\D(\d{1,2})/.exec(s);
+  if (m) return (+m[1]) * 10000 + (+m[2]) * 100 + (+m[3]);
+  var d = s.replace(/\D/g, '');
+  if (d) return parseInt(d.slice(0, 8), 10) || 0;
+  return 0;                                   /* 没填时间 → 排最后 */
+}
+
+/* ============================================================
+   保存文件
+   ------------------------------------------------------------
+   浏览器出于安全限制，不允许网页直接往桌面建文件夹，
+   必须由用户在一次"选择文件夹"的操作里授权。所以：
+     · 优先：让用户选一个"上级文件夹"（默认停在桌面），
+             程序在里面自动创建「报修记录」子目录再存进去
+     · 其次：让用户选"另存为"的完整位置
+     · 兜底：走浏览器普通下载（进"下载"文件夹）
+   ============================================================ */
+var EXPORT_DIR = null;        /* 本次会话内记住的上级目录句柄 */
+
+function resetExportDir(){
+  EXPORT_DIR = null;
+  toast('已清除。下次导出时会重新让你选择保存位置');
+}
+
+function saveXlsxSmart(bytes, filename, subfolder){
+  var blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  });
+
+  return (async function(){
+    /* ---- 路线 1：目录选择器 + 自动建子文件夹 ---- */
+    if (typeof window.showDirectoryPicker === 'function'){
+      try {
+        var parent = EXPORT_DIR;
+        if (!parent){
+          parent = await window.showDirectoryPicker({
+            id: 'lab-baoxiu-dir',            /* 浏览器会记住上次用的目录 */
+            startIn: 'desktop',              /* 默认停在桌面 */
+            mode: 'readwrite'
+          });
+          EXPORT_DIR = parent;
+        }
+        var dir = await parent.getDirectoryHandle(subfolder, { create: true });
+        /* 同名文件不覆盖，自动加 (2)(3) */
+        var name = filename;
+        var i = 2;
+        while (true){
+          try { await dir.getFileHandle(name); }
+          catch(e){ if (e && e.name === 'NotFoundError') break; throw e; }
+          name = filename.replace(/\.xlsx$/i, '') + '(' + (i++) + ').xlsx';
+        }
+        var fh = await dir.getFileHandle(name, { create: true });
+        var w = await fh.createWritable();
+        await w.write(blob);
+        await w.close();
+        return { how:'folder', where: (parent.name || '所选文件夹') + '\\' + subfolder, name: name };
+      } catch(e){
+        if (e && e.name === 'AbortError') return { cancelled: true };
+        EXPORT_DIR = null;                   /* 权限失效等 → 换路线 */
+      }
+    }
+
+    /* ---- 路线 2：另存为 ---- */
+    if (typeof window.showSaveFilePicker === 'function'){
+      try {
+        var fh2 = await window.showSaveFilePicker({
+          id: 'lab-baoxiu-file',
+          startIn: 'desktop',
+          suggestedName: filename,
+          types: [{
+            description: 'Excel 工作簿',
+            accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] }
+          }]
+        });
+        var w2 = await fh2.createWritable();
+        await w2.write(blob);
+        await w2.close();
+        return { how:'file', name: fh2.name || filename };
+      } catch(e){
+        if (e && e.name === 'AbortError') return { cancelled: true };
+      }
+    }
+
+    /* ---- 路线 3：普通下载兜底 ---- */
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 800);
+    return { how:'download', name: filename };
+  })();
+}
+
+/* ============================================================
+   导出报修记录
+   labId 为空 = 全部实验室汇总
+   ============================================================ */
+var REPAIR_HEADER = ['序号','实验室编号','实验室名称','报修时间','电脑编号','报修问题','已申报','已维修完毕','状态'];
+var REPAIR_WIDTHS = [6, 11, 18, 13, 12, 36, 9, 13, 16];
+
+async function exportRepairs(labId){
+  var scope = labId || '';
+  var list = [];
+  DB.labs.forEach(function(lab){
+    if (scope && lab.id !== scope) return;
+    (lab.repairs || []).forEach(function(r){
+      list.push({ lab: lab, r: r, key: timeSortKey(r.time) });
+    });
+  });
+
+  if (!list.length){
+    toast(scope ? ('实验室 ' + scope + ' 还没有报修记录') : '还没有任何报修记录');
+    return;
+  }
+
+  /* 纯按报修时间排序：最新的在前；时间相同的按实验室编号 */
+  list.sort(function(a, b){
+    if (b.key !== a.key) return b.key - a.key;
+    return String(a.lab.id).localeCompare(String(b.lab.id), 'zh');
+  });
+
+  var rows = [REPAIR_HEADER];
+  list.forEach(function(x, i){
+    var r = x.r;
+    rows.push([
+      String(i + 1),
+      x.lab.id,
+      x.lab.name || '',
+      r.time || '',
+      r.machine || '',
+      repProblemText(r) || '',
+      r.declared ? '是' : '否',
+      r.fixed ? '是' : '否',
+      repStateText(r)
+    ]);
+  });
+
+  var bytes = buildXlsx('报修记录', rows, REPAIR_WIDTHS);
+  var fname = '报修记录_' + (scope || '全部') + '_' + today() + '.xlsx';
+
+  var res;
+  try {
+    res = await saveXlsxSmart(bytes, fname, '报修记录');
+  } catch(e){
+    toast('导出失败：' + ((e && e.message) || e));
+    return;
+  }
+  if (res && res.cancelled){ toast('已取消导出'); return; }
+
+  if (res.how === 'folder'){
+    toast('已保存到「' + res.where + '」：' + res.name);
+  } else if (res.how === 'file'){
+    toast('已保存：' + res.name);
+  } else {
+    toast('已下载 ' + res.name + '（在浏览器的"下载"文件夹里）');
+  }
+}
+
+function dlgBackup(){
+  var txt = JSON.stringify(DB, null, 2);
+  openDlg('<h3>导出备份</h3><div class="st">换电脑或重装前请先做这一步</div>'
+    + '<div class="row-btns" style="margin:0 0 10px">'
+    + '<button class="btn" onclick="downloadJson()">下载为文件</button>'
+    + '<button class="btn ghost" onclick="copyBackup()">复制到剪贴板</button></div>'
+    + '<div class="muted">也可以直接全选下面内容复制保存：</div>'
+    + '<pre class="prev" id="bkText">' + esc(txt) + '</pre>'
+    + '<div class="row-btns"><button class="btn ghost" onclick="closeDlg()">关闭</button></div>');
+}
+function downloadJson(){
+  var txt = JSON.stringify(DB, null, 2);
+  var blob = new Blob([txt], { type:'application/json;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '实验室管理备份-' + today() + '.json';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  toast('已下载备份文件');
+}
+function copyBackup(){
+  var txt = JSON.stringify(DB, null, 2);
+  if (navigator.clipboard && location.protocol!=='file:'){
+    navigator.clipboard.writeText(txt).then(function(){ toast('已复制到剪贴板'); })
+      .catch(function(){ toast('复制失败，请手动全选复制'); });
+  } else {
+    toast('请手动全选下面的内容复制');
+  }
+}
+function dlgRestore(){
+  openDlg('<h3>导入备份</h3><div class="st">会覆盖当前全部数据</div>'
+    + '<label class="f"><span class="k">选择备份文件（.json）</span><input type="file" id="rsFile" accept=".json"></label>'
+    + '<label class="f"><span class="k">或者把备份内容粘在这里</span><textarea id="rsText" placeholder="粘贴备份的 JSON 内容"></textarea></label>'
+    + '<div class="row-btns"><button class="btn" onclick="doRestore()">导入并覆盖</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+  $('#rsFile').onchange = function(e){
+    var f = e.target.files[0]; if (!f) return;
+    var fr = new FileReader();
+    fr.onload = function(){ $('#rsText').value = String(fr.result); toast('已读取文件，点"导入并覆盖"生效'); };
+    fr.readAsText(f, 'utf-8');
+  };
+}
+function doRestore(){
+  var txt = $('#rsText').value.trim();
+  if (!txt){ toast('请先选择文件或粘贴内容'); return; }
+  var d;
+  try { d = JSON.parse(txt); }
+  catch(e){ toast('内容格式不对，导入失败'); return; }
+  if (!d || !d.labs){ toast('这不是本程序的备份文件'); return; }
+  if (!confirm('确定用这份备份覆盖当前全部数据？')) return;
+  DB = d;
+  save(); closeDlg(); goHome();
+  toast('已导入 ' + DB.labs.length + ' 个实验室');
+}
+function dlgReset(){
+  openDlg('<h3>恢复预置数据</h3>'
+    + '<div class="alert r" style="margin:0 0 12px">当前全部数据会被替换成最初预置的 203、330 两个实验室。'
+    + '你后来添加的实验室和报修记录都会消失。</div>'
+    + '<div class="row-btns"><button class="btn danger" onclick="doReset()">确认恢复</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+}
+function doReset(){
+  DB = seedData();
+  save(); closeDlg(); goHome();
+  toast('已恢复到预置数据');
+}
+
+/* ============================================================
+   从 Excel 导入配置清单
+   不依赖任何外部组件：xlsx = ZIP + XML，用浏览器自带解压能力读
+   ============================================================ */
+function dlgImport(targetLab){
+  openDlg('<h3>从 Excel 导入配置清单</h3>'
+    + '<div class="st">选一个或多个「实验室配置清单」xlsx 文件。'
+    + '每个工作表会被识别成一个实验室（工作表名 = 实验室编号）。</div>'
+    + '<label class="filebox"><div class="fi">📄</div>'
+    + '<div class="ft">点这里选择配置文件</div>'
+    + '<div class="fs">配置清单 .xlsx，可一次选多个</div>'
+    + '<input type="file" id="ipFile" accept=".xlsx" multiple></label>'
+    + '<div id="ipResult"></div>'
+    + '<div class="row-btns" id="ipBtns"><button class="btn ghost" onclick="closeDlg()">关闭</button></div>');
+  $('#ipFile').onchange = function(e){ handleFiles(e.target.files, targetLab); };
+}
+
+/* ---------- ZIP ---------- */
+function zipFindEOCD(dv, len){
+  for (var i = len - 22; i >= 0 && i >= len - 22 - 65535; i--){
+    if (dv.getUint32(i, true) === 0x06054b50) return i;
+  }
+  return -1;
+}
+function zipEntries(dv, len){
+  var eocd = zipFindEOCD(dv, len);
+  if (eocd < 0) throw new Error('不是有效的 xlsx（找不到 ZIP 目录）');
+  var count = dv.getUint16(eocd + 10, true);
+  var off = dv.getUint32(eocd + 16, true);
+  var out = {}, p = off;
+  for (var i = 0; i < count; i++){
+    if (dv.getUint32(p, true) !== 0x02014b50) throw new Error('ZIP 目录损坏');
+    var method  = dv.getUint16(p + 10, true);
+    var compSz  = dv.getUint32(p + 20, true);
+    var nameLen = dv.getUint16(p + 28, true);
+    var extraLen= dv.getUint16(p + 30, true);
+    var cmtLen  = dv.getUint16(p + 32, true);
+    var lho     = dv.getUint32(p + 42, true);
+    var name = new TextDecoder('utf-8').decode(new Uint8Array(dv.buffer, p + 46, nameLen));
+    var lNameLen = dv.getUint16(lho + 26, true);
+    var lExtraLen= dv.getUint16(lho + 28, true);
+    out[name] = { method:method, start: lho + 30 + lNameLen + lExtraLen, size: compSz };
+    p += 46 + nameLen + extraLen + cmtLen;
+  }
+  return out;
+}
+async function zipRead(dv, e){
+  if (!e) return null;
+  var bytes = new Uint8Array(dv.buffer, e.start, e.size);
+  if (e.method === 0) return new TextDecoder('utf-8').decode(bytes);
+  if (e.method !== 8) throw new Error('不支持的压缩方式');
+  var stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return await new Response(stream).text();
+}
+
+/* ---------- XML ---------- */
+var NS_MAIN = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main';
+function colNum(letters){
+  var n = 0;
+  for (var i=0;i<letters.length;i++) n = n*26 + (letters.charCodeAt(i)-64);
+  return n;
+}
+function parseSheet(xmlText, shared){
+  var doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+  if (doc.querySelector('parsererror')) throw new Error('工作表 XML 解析失败');
+  var sd = doc.getElementsByTagNameNS(NS_MAIN,'sheetData')[0];
+  var grid = {}, maxR = 0, maxC = 0;
+  if (sd){
+    var rows = sd.getElementsByTagNameNS(NS_MAIN,'row');
+    for (var i=0;i<rows.length;i++){
+      var r = parseInt(rows[i].getAttribute('r'),10);
+      if (!r) continue;
+      maxR = Math.max(maxR, r);
+      var cs = rows[i].getElementsByTagNameNS(NS_MAIN,'c');
+      for (var j=0;j<cs.length;j++){
+        var c = cs[j];
+        var m = /^([A-Z]+)(\d+)$/.exec(c.getAttribute('r')||'');
+        if (!m) continue;
+        var col = colNum(m[1]);
+        maxC = Math.max(maxC, col);
+        var t = c.getAttribute('t');
+        var vN = c.getElementsByTagNameNS(NS_MAIN,'v')[0];
+        var iN = c.getElementsByTagNameNS(NS_MAIN,'is')[0];
+        var val = null;
+        if (t==='s' && vN) val = shared[parseInt(vN.textContent,10)];
+        else if (t==='inlineStr' && iN){
+          var ts = iN.getElementsByTagNameNS(NS_MAIN,'t'), buf=[];
+          for (var k=0;k<ts.length;k++) buf.push(ts[k].textContent);
+          val = buf.join('');
+        }
+        else if (vN) val = vN.textContent;
+        if (val!==null && val!==undefined && String(val).trim()!=='') grid[r+','+col] = String(val);
+      }
+    }
+  }
+  /* 合并单元格：把左上角的值填满整个区域（类别继承靠这一步） */
+  var mc = doc.getElementsByTagNameNS(NS_MAIN,'mergeCell');
+  for (var q=0;q<mc.length;q++){
+    var ref = mc[q].getAttribute('ref'); if (!ref) continue;
+    var pr = ref.split(':'); if (pr.length!==2) continue;
+    var a = /^([A-Z]+)(\d+)$/.exec(pr[0]), b = /^([A-Z]+)(\d+)$/.exec(pr[1]);
+    if (!a||!b) continue;
+    var r1=+a[2], c1=colNum(a[1]), r2=+b[2], c2=colNum(b[1]);
+    var top = grid[r1+','+c1];
+    if (top!==undefined){
+      for (var rr=r1;rr<=r2;rr++) for (var cc=c1;cc<=c2;cc++)
+        if (grid[rr+','+cc]===undefined) grid[rr+','+cc] = top;
+    }
+    maxR = Math.max(maxR,r2); maxC = Math.max(maxC,c2);
+  }
+  return { grid:grid, maxR:maxR, maxC:maxC };
+}
+
+/* ---------- 把一张工作表解析成实验室 ---------- */
+/* 从标题里取实验室编号（房间号）。
+   配置清单的标题是「203智能科学实验室」，课表的标题是
+   「江苏师范大学科文学院 潘安湖匠心楼330  教室课表」——两种都要能取到。 */
+function labIdFromTitle(title, sheetName){
+  var t = String(title || '');
+  var m = /(\d{3,4})\s*教室/.exec(t);      /* 「…匠心楼330  教室课表」 */
+  if (m) return m[1];
+  m = /(?:楼|室|栋|区)[\s]*(\d{3,4})/.exec(t);
+  if (m) return m[1];
+  m = /^\s*(\d{3,4})/.exec(t);             /* 「203智能科学实验室」 */
+  if (m) return m[1];
+  m = /(\d{3,4})/.exec(t);
+  if (m) return m[1];
+  var sn = String(sheetName || '').trim();
+  if (/^\d{3,4}$/.test(sn)) return sn;     /* 表名本身就是编号 */
+  return sn || '';
+}
+/* 取实验室名称：配置清单标题去掉开头的编号 */
+function labNameFromTitle(title){
+  return String(title || '').replace(/^\s*\d{3,4}\s*/, '').trim();
+}
+/* 判断是不是"课程表"（而不是"配置清单"） */
+function looksLikeCourseSheet(sh){
+  for (var r = 1; r <= Math.min(sh.maxR, 6); r++){
+    for (var c = 1; c <= Math.min(sh.maxC, 12); c++){
+      var v = sh.grid[r + ',' + c];
+      if (v && (String(v).indexOf('课表') >= 0 || String(v).indexOf('教室:') >= 0)) return true;
+    }
+  }
+  return false;
+}
+
+/* 课表里每个格子的内容拆成一条条课程。
+   格式（换行分隔）：
+     课程名
+     （空行）
+     班级
+     教师
+      周次 周[节次]
+   一个格子里可能有多门课。 */
+function parseCellCourses(txt){
+  var out = [];
+  if (!txt) return out;
+  var lines = String(txt).replace(/\r/g,'').split('\n');
+  var cleaned = [];
+  for (var i=0;i<lines.length;i++){
+    var v = lines[i].replace(/[\u00a0\u3000]/g,' ').trim();
+    if (v !== '') cleaned.push(v);
+  }
+  var i2 = 0;
+  while (i2 < cleaned.length){
+    /* 找到一条"周次+节次"行（含「周」且含「[」） */
+    var start = -1;
+    for (var k = i2; k < cleaned.length; k++){
+      if (/周/.test(cleaned[k]) && /\[/.test(cleaned[k])){ start = k; break; }
+      if (k - i2 > 3) break;
+    }
+    if (start < 0) break;
+    var meta = cleaned[start];
+    var head = cleaned.slice(i2, start);          /* 课程名 / 班级 / 教师 */
+    var crs = head.length ? head[0] : '';
+    var rest = head.slice(1);
+    /* 末尾是教师、倒数第二是班级（更稳一点：含"班"的当班级） */
+    var cls = '', tch = '';
+    if (rest.length === 1){ cls = rest[0]; }
+    else if (rest.length >= 2){
+      tch = rest[rest.length - 1];
+      cls = rest.slice(0, rest.length - 1).join(' ');
+    }
+    if (!cls){
+      var ci = -1;
+      for (var z = 0; z < head.length; z++) if (/班/.test(head[z])){ ci = z; break; }
+      if (ci === 0){ crs = ''; cls = head[0]; tch = head.slice(1).join(' '); }
+    }
+    /* 周次与节次。注意 meta 形如 "7-14 周[01-02节]"，
+       方括号里可能自带"节"字，也可能没有 —— 统一把末尾的"节"剥掉，
+       显示时再补回来，避免出现 "01-02节节"。 */
+    var mm = /^(.*?)周\s*\[([^\]]*)\]/.exec(meta);
+    var weeks = mm ? mm[1].trim() : '';
+    var periods = mm ? mm[2].trim() : '';
+    if (!mm){
+      mm = /\[([^\]]*)\]/.exec(meta);
+      periods = mm ? mm[1].trim() : '';
+      weeks = meta.replace(/\[[^\]]*\]/,'').replace(/周/g,'').trim();
+    }
+    periods = periods.replace(/节+$/,'').trim();
+    out.push({ crs:crs, cls:cls, tch:tch, weeks:weeks, periods:periods });
+    i2 = start + 1;
+  }
+  return out;
+}
+
+/* 大节序号统一成数字。
+   课表里那一列写的是「第一大节」，直接截出来会得到汉字「一」，
+   和预置数据里的数字 '1' 对不上，会导致按大节查课查不到。
+   所以不论汉字还是数字，一律归成 '1'..'5' 这种字符串。 */
+var BIG_CN = { '一':'1', '二':'2', '三':'3', '四':'4', '五':'5',
+               '六':'6', '七':'7', '八':'8', '九':'9', '十':'10' };
+function normBig(v){
+  var s = String(v==null?'':v).replace(/第|大节|\s/g,'').trim();
+  if (BIG_CN[s]) return BIG_CN[s];
+  var d = s.replace(/\D/g,'');
+  if (d) return String(parseInt(d,10));
+  return s;                       /* 认不出来就原样保留，不硬猜 */
+}
+
+/* 把课表工作表读成 {id,name,courses} */
+function courseSheetToLab(sheetName, sh){
+  var g = sh.grid;
+  function cell(r,c){ var v = g[r+','+c]; return v===undefined ? '' : String(v).trim(); }
+  var title = cell(1,1);
+  var id = labIdFromTitle(title, sheetName);
+  var courses = [];
+  var DAYS = ['周一','周二','周三','周四','周五','周六','周日'];
+  var dayOfCol = { 2:0, 3:1, 4:2, 5:3, 6:4, 7:5, 8:6 };   /* B..H = 星期一..星期日 */
+  for (var r = 4; r <= sh.maxR; r++){
+    var bigRaw = cell(r,1);
+    if (!/大节/.test(bigRaw)) continue;
+    var big = normBig(bigRaw);
+    if (!big) continue;
+    Object.keys(dayOfCol).forEach(function(colKey){
+      var col = parseInt(colKey,10);
+      var txt = cell(r,col);
+      if (!txt) return;
+      parseCellCourses(txt).forEach(function(cc){
+        courses.push({
+          day: dayOfCol[col],
+          dayName: DAYS[dayOfCol[col]],
+          big: big,
+          crs: cc.crs, cls: cc.cls, tch: cc.tch,
+          weeks: cc.weeks, periods: cc.periods
+        });
+      });
+    });
+  }
+  return { id:id, name:'', title:title, courses:courses };
+}
+
+function sheetToLab(sheetName, sh){
+  /* 课表 vs 配置清单 */
+  if (looksLikeCourseSheet(sh)) return courseSheetToLab(sheetName, sh);
+
+  var g = sh.grid;
+  function cell(r,c){ var v = g[r+','+c]; return v===undefined ? '' : String(v).trim(); }
+
+  /* 标题（第1行）：配置清单如「203智能科学实验室」 */
+  var title = cell(1,1);
+  var name = labNameFromTitle(title);
+  var id = labIdFromTitle(title, sheetName);
+
+  function findSection(keyword){
+    for (var r=1;r<=sh.maxR;r++) if (cell(r,1).indexOf(keyword)>=0) return r;
+    return -1;
+  }
+
+  var rHW  = findSection('硬件配置');
+  var rEnv = findSection('系统环境');
+  var rSW  = findSection('软件清单');
+
+  var lab = { id:id, name:name, title:title, hw:[], env:[], sw:[], repairs:[] };
+
+  /* --- 硬件配置：项目/配置/采购年份/保修状态/数量 --- */
+  if (rHW > 0){
+    var endHW = rEnv > 0 ? rEnv - 1 : sh.maxR;
+    for (var r = rHW + 1; r <= endHW; r++){
+      var a = cell(r,1);
+      if (!a) continue;
+      if (/^项目$/.test(a)) continue;                    /* 表头 */
+      if (a.indexOf('、')>=0) continue;                   /* 段落标题 */
+      lab.hw.push({ item:a, config:cell(r,2), year:cell(r,3), warranty:cell(r,4), qty:cell(r,5) });
+    }
+  }
+  /* --- 系统环境：项目/版本·配置 --- */
+  if (rEnv > 0){
+    var endEnv = rSW > 0 ? rSW - 1 : sh.maxR;
+    for (var r2 = rEnv + 1; r2 <= endEnv; r2++){
+      var a2 = cell(r2,1);
+      if (!a2) continue;
+      if (/^项目$/.test(a2)) continue;
+      if (a2.indexOf('、')>=0) continue;
+      lab.env.push({ item:a2, config:cell(r2,2) });
+    }
+  }
+  /* --- 软件清单：类别/软件名称/版本/备注（类别靠合并单元格继承） --- */
+  if (rSW > 0){
+    for (var r3 = rSW + 1; r3 <= sh.maxR; r3++){
+      var cat = cell(r3,1), nm = cell(r3,2), ver = cell(r3,3), note = cell(r3,4);
+      if (/^类别$/.test(cat)) continue;
+      if (!nm && !cat) continue;
+      if (!nm) continue;                                  /* 没软件名就跳过 */
+      lab.sw.push({ cat:cat, name:nm, ver:ver, note:note });
+    }
+  }
+  return lab;
+}
+
+/* ============================================================
+   读旧版 .xls（OLE2 复合文档 + BIFF8 记录）
+   —— 学校发的课表就是这种。浏览器里没有 Office 可用，所以自己解。
+   ============================================================ */
+function ole2Read(buf){
+  var dv = new DataView(buf), u8 = new Uint8Array(buf);
+  if (dv.getUint32(0,true) !== 0xE011CFD0 || dv.getUint32(4,true) !== 0xE11AB1A1){
+    throw new Error('不是有效的 .xls 文件');
+  }
+  var ssz  = 1 << dv.getUint16(0x1E, true);      /* 通常 512 */
+  var mssz = 1 << dv.getUint16(0x20, true);      /* 通常 64 */
+  var nFat = dv.getUint32(0x2C, true);
+  var dirStart = dv.getUint32(0x30, true);
+  var miniCutoff = dv.getUint32(0x38, true);
+  var miniFatStart = dv.getUint32(0x3C, true);
+  var difatStart = dv.getUint32(0x44, true);
+  var nDifat = dv.getUint32(0x48, true);
+  function secOff(s){ return (s + 1) * ssz; }
+  function u32(i){ return dv.getUint32(i, true); }
+
+  /* --- 收集 FAT 扇区号 --- */
+  var fatSectors = [];
+  for (var i = 0; i < 109; i++){
+    var s = u32(0x4C + i*4);
+    if (s === 0xFFFFFFFF) break;
+    fatSectors.push(s);
+  }
+  if (nDifat > 0 && difatStart !== 0xFFFFFFFE){
+    var d = difatStart, guard = 0;
+    while (d !== 0xFFFFFFFE && d !== 0xFFFFFFFF && guard++ < 10000){
+      var base = secOff(d);
+      var cnt = ssz/4 - 1;
+      for (var j = 0; j < cnt; j++){
+        var v = u32(base + j*4);
+        if (v === 0xFFFFFFFF) break;
+        fatSectors.push(v);
+      }
+      d = u32(base + ssz - 4);
+    }
+  }
+  /* --- FAT 表 --- */
+  var fat = [];
+  for (var fi = 0; fi < fatSectors.length; fi++){
+    var b0 = secOff(fatSectors[fi]);
+    for (var k = 0; k < ssz/4; k++) fat.push(u32(b0 + k*4));
+  }
+  /* --- 顺着扇区链读一段连续数据 --- */
+  function readChain(start, size){
+    var out = new Uint8Array(size), pos = 0, s = start, guard = 0;
+    while (s !== 0xFFFFFFFE && s !== 0xFFFFFFFF && pos < size && guard++ < 1000000){
+      var off = secOff(s);
+      var n = Math.min(ssz, size - pos);
+      out.set(u8.subarray(off, off + n), pos);
+      pos += n;
+      s = (s < fat.length) ? fat[s] : 0xFFFFFFFE;
+    }
+    return out;
+  }
+  /* --- 目录项 --- */
+  if (dirStart === 0xFFFFFFFE) throw new Error('.xls 结构异常（没有目录）');
+  var dirLen = 0, ds = dirStart, guard2 = 0;
+  while (ds !== 0xFFFFFFFE && ds !== 0xFFFFFFFF && guard2++ < 100000){
+    dirLen += ssz; ds = (ds < fat.length) ? fat[ds] : 0xFFFFFFFE;
+  }
+  var dir = readChain(dirStart, dirLen);
+  var ddv = new DataView(dir.buffer, dir.byteOffset, dir.byteLength);
+  var entries = [];
+  for (var off2 = 0; off2 + 128 <= dirLen; off2 += 128){
+    var nameLen = ddv.getUint16(off2 + 64, true);
+    if (!nameLen) continue;
+    var nm = '';
+    for (var c = 0; c + 1 < nameLen - 2; c += 2) nm += String.fromCharCode(ddv.getUint16(off2 + c, true));
+    entries.push({
+      name: nm,
+      type: dir[off2 + 66],
+      start: ddv.getUint32(off2 + 116, true),
+      size: ddv.getUint32(off2 + 120, true)
+    });
+  }
+  var root = null, wb = null;
+  for (var e = 0; e < entries.length; e++){
+    if (entries[e].type === 5 && !root) root = entries[e];
+    if (entries[e].type === 2 && /^(Workbook|Book)$/i.test(entries[e].name) && !wb) wb = entries[e];
+  }
+  if (!wb) throw new Error('.xls 里找不到工作表数据流');
+  if (wb.size <= 0) throw new Error('.xls 内容为空');
+
+  /* --- 大流：直接从 FAT 读 --- */
+  if (wb.size >= miniCutoff){
+    return readChain(wb.start, wb.size);
+  }
+  /* --- 小流：先读出"迷你流"整体，再按迷你 FAT 取 --- */
+  if (!root || root.start === 0xFFFFFFFE) throw new Error('.xls 根目录缺失');
+  var miniStream = readChain(root.start, root.size);
+  var miniFat = [];
+  var mf = miniFatStart, guard3 = 0;
+  while (mf !== 0xFFFFFFFE && mf !== 0xFFFFFFFF && guard3++ < 100000){
+    var mb = secOff(mf);
+    for (var q = 0; q < ssz/4; q++) miniFat.push(u32(mb + q*4));
+    mf = (mf < fat.length) ? fat[mf] : 0xFFFFFFFE;
+  }
+  var res = new Uint8Array(wb.size), pos2 = 0, ms = wb.start, guard4 = 0;
+  while (ms !== 0xFFFFFFFE && ms !== 0xFFFFFFFF && pos2 < wb.size && guard4++ < 1000000){
+    var mo = ms * mssz;
+    var mn = Math.min(mssz, wb.size - pos2);
+    if (mo + mn > miniStream.length) break;
+    res.set(miniStream.subarray(mo, mo + mn), pos2);
+    pos2 += mn;
+    ms = (ms < miniFat.length) ? miniFat[ms] : 0xFFFFFFFE;
+  }
+  return res;
+}
+
+/* ---------- BIFF8 ---------- */
+function biffReadSST(stream){
+  var dv = new DataView(stream.buffer, stream.byteOffset, stream.byteLength);
+  var n = stream.length;
+  /* 先定位 SST（0x00FC），并把紧随其后的 CONTINUE 串起来 */
+  var blocks = [], pos = 0;
+  while (pos + 4 <= n){
+    var id = dv.getUint16(pos, true), len = dv.getUint16(pos + 2, true);
+    if (pos + 4 + len > n) break;
+    if (id === 0x00FC){
+      blocks.push(stream.subarray(pos + 4, pos + 4 + len));
+      var p2 = pos + 4 + len;
+      while (p2 + 4 <= n && dv.getUint16(p2, true) === 0x003C){
+        var l2 = dv.getUint16(p2 + 2, true);
+        if (p2 + 4 + l2 > n) break;
+        blocks.push(stream.subarray(p2 + 4, p2 + 4 + l2));
+        p2 += 4 + l2;
+      }
+      break;
+    }
+    pos += 4 + len;
+  }
+  if (!blocks.length) return [];
+  var total = 0, unique = 0, cur = 0, off = 0;
+  function atEnd(){ return cur >= blocks.length; }
+  function curBuf(){ return blocks[cur]; }
+  function avail(){ return curBuf().length - off; }
+  function byteAt(i){ return curBuf()[off + i]; }
+  total  = curBuf()[off] | (curBuf()[off+1]<<8) | (curBuf()[off+2]<<16) | (curBuf()[off+3]<<24);
+  off += 4;
+  unique = curBuf()[off] | (curBuf()[off+1]<<8) | (curBuf()[off+2]<<16) | (curBuf()[off+3]<<24);
+  off += 4;
+
+  var out = [];
+  for (var si = 0; si < unique; si++){
+    while (!atEnd() && avail() < 3){ cur++; off = 0; }
+    if (atEnd()) break;
+    var cch = curBuf()[off] | (curBuf()[off+1]<<8);
+    var flags = curBuf()[off+2];
+    off += 3;
+    var rich = (flags & 0x08) ? 1 : 0;
+    var asian = (flags & 0x04) ? 1 : 0;
+    var nRuns = 0, cbExt = 0;
+    if (rich){
+      while (!atEnd() && avail() < 2){ cur++; off = 0; }
+      nRuns = curBuf()[off] | (curBuf()[off+1]<<8); off += 2;
+    }
+    if (asian){
+      while (!atEnd() && avail() < 4){ cur++; off = 0; }
+      cbExt = curBuf()[off] | (curBuf()[off+1]<<8) | (curBuf()[off+2]<<16) | (curBuf()[off+3]<<24);
+      off += 4;
+    }
+    var s = '', remaining = cch, compressed = !(flags & 0x01);
+    while (remaining > 0){
+      if (atEnd()) break;
+      if (avail() <= 0){ cur++; off = 0; compressed = !(curBuf()[0] & 0x01); off = 1; continue; }
+      if (compressed){
+        var take = Math.min(remaining, avail());
+        for (var t = 0; t < take; t++) s += String.fromCharCode(curBuf()[off + t]);
+        off += take; remaining -= take;
+      } else {
+        var take2 = Math.min(remaining, Math.floor(avail()/2));
+        if (take2 <= 0){ cur++; off = 0; compressed = !(curBuf()[0] & 0x01); off = 1; continue; }
+        for (var t2 = 0; t2 < take2; t2++) s += String.fromCharCode(curBuf()[off + t2*2] | (curBuf()[off + t2*2 + 1] << 8));
+        off += take2*2; remaining -= take2;
+      }
+    }
+    /* 跳过富文本格式串与扩展区 */
+    var skip = nRuns * 4 + cbExt;
+    while (skip > 0 && !atEnd()){
+      var canSkip = Math.min(skip, avail());
+      off += canSkip; skip -= canSkip;
+      if (skip > 0){ cur++; off = 0; }
+    }
+    out.push(s);
+  }
+  return out;
+}
+
+function biffSheetNames(stream){
+  /* 统一用 DataView 读，避免 Uint8Array 与 DataView 混用造成偏移错位 */
+  var dv = new DataView(stream.buffer, stream.byteOffset, stream.byteLength);
+  var n = stream.length, pos = 0, names = [];
+  while (pos + 4 <= n){
+    var id = dv.getUint16(pos, true), len = dv.getUint16(pos + 2, true);
+    if (pos + 4 + len > n) break;
+    if (id === 0x0085){                      /* BOUNDSHEET
+         记录体 d[]（d = pos+4）已用实际字节核对过：
+           d[0..3] = 该表在流中的位置
+           d[4]    = grbit（可见性/类型）
+           d[5]    = 保留字节
+           d[6]    = cch，名字字符数
+           d[7]    = flags，bit0=1 表示 UTF-16LE
+           d[8..]  = 名字                    */
+      var cch   = dv.getUint8(pos + 4 + 6);
+      var flags = dv.getUint8(pos + 4 + 7);
+      var nm = '';
+      if (flags & 0x01){                     /* UTF-16LE */
+        for (var i = 0; i < cch; i++) nm += String.fromCharCode(dv.getUint16(pos + 4 + 8 + i*2, true));
+      } else {                               /* 单字节 */
+        for (var j = 0; j < cch; j++) nm += String.fromCharCode(dv.getUint8(pos + 4 + 8 + j));
+      }
+      names.push(nm);
+    }
+    pos += 4 + len;
+  }
+  return names;
+}
+
+/* 把 BIFF8 里的一张工作表读成和 parseSheet 一样的结果 { grid, maxR, maxC } */
+function biffSheetGrid(stream, sst){
+  var dv = new DataView(stream.buffer, stream.byteOffset, stream.byteLength);
+  var n = stream.length;
+  var grid = {}, merges = [], maxR = 0, maxC = 0;
+  var pos = 0;
+  while (pos + 4 <= n){
+    var id = dv.getUint16(pos, true), len = dv.getUint16(pos + 2, true);
+    if (pos + 4 + len > n) break;
+    var d = pos + 4;
+
+    if (id === 0x00FD){                      /* LABELSST：共享字符串索引 */
+      var r = dv.getUint16(d, true), c = dv.getUint16(d + 2, true);
+      var idx = dv.getUint32(d + 6, true);
+      if (sst[idx] !== undefined && String(sst[idx]).trim() !== ''){
+        grid[(r+1) + ',' + (c+1)] = sst[idx];
+        maxR = Math.max(maxR, r+1); maxC = Math.max(maxC, c+1);
+      }
+    } else if (id === 0x0203){               /* NUMBER：数值 */
+      var r2 = dv.getUint16(d, true), c2 = dv.getUint16(d + 2, true);
+      var v = dv.getFloat64(d + 6, true);
+      var sv = fmtNum(v);
+      if (sv !== ''){ grid[(r2+1) + ',' + (c2+1)] = sv; maxR = Math.max(maxR, r2+1); maxC = Math.max(maxC, c2+1); }
+    } else if (id === 0x027E){               /* RK：压缩数值 */
+      var r3 = dv.getUint16(d, true), c3 = dv.getUint16(d + 2, true);
+      var sv3 = fmtNum(rkValue(dv.getUint32(d + 6, true)));
+      if (sv3 !== ''){ grid[(r3+1) + ',' + (c3+1)] = sv3; maxR = Math.max(maxR, r3+1); maxC = Math.max(maxC, c3+1); }
+    } else if (id === 0x00BD){               /* MULRK：一行多个 RK */
+      var r4 = dv.getUint16(d, true), c4 = dv.getUint16(d + 2, true);
+      var cnt = (len - 6) / 6;
+      for (var m = 0; m < cnt; m++){
+        var sv4 = fmtNum(rkValue(dv.getUint32(d + 4 + m*6 + 2, true)));
+        if (sv4 !== ''){
+          grid[(r4+1) + ',' + (c4+m+1)] = sv4;
+          maxR = Math.max(maxR, r4+1); maxC = Math.max(maxC, c4+m+1);
+        }
+      }
+    } else if (id === 0x0204){               /* LABEL：直接内嵌字符串（旧写法） */
+      var r5 = dv.getUint16(d, true), c5 = dv.getUint16(d + 2, true);
+      var cch5 = dv.getUint16(d + 6, true);
+      var fl5 = stream[d + 8];
+      var s5 = '';
+      if (fl5 & 0x01){ for (var i5=0;i5<cch5;i5++) s5 += String.fromCharCode(dv.getUint16(d+9+i5*2,true)); }
+      else { for (var j5=0;j5<cch5;j5++) s5 += String.fromCharCode(stream[d+9+j5]); }
+      if (s5.trim() !== ''){ grid[(r5+1) + ',' + (c5+1)] = s5; maxR = Math.max(maxR,r5+1); maxC = Math.max(maxC,c5+1); }
+    } else if (id === 0x00E5){               /* MERGEDCELLS：合并区域 */
+      var cnt2 = dv.getUint16(d, true);
+      for (var q2 = 0; q2 < cnt2; q2++){
+        var o = d + 2 + q2*8;
+        if (o + 8 > pos + 4 + len) break;
+        merges.push({
+          r1: dv.getUint16(o, true) + 1, r2: dv.getUint16(o+2, true) + 1,
+          c1: dv.getUint16(o+4, true) + 1, c2: dv.getUint16(o+6, true) + 1
+        });
+      }
+    } else if (id === 0x000A){               /* EOF：本表结束 */
+      break;
+    }
+    pos += 4 + len;
+  }
+  /* 合并单元格：左上角的值填满整个区域 */
+  merges.forEach(function(mg){
+    var top = grid[mg.r1 + ',' + mg.c1];
+    if (top === undefined) return;
+    for (var rr = mg.r1; rr <= mg.r2; rr++) for (var cc = mg.c1; cc <= mg.c2; cc++){
+      if (grid[rr + ',' + cc] === undefined) grid[rr + ',' + cc] = top;
+    }
+    maxR = Math.max(maxR, mg.r2); maxC = Math.max(maxC, mg.c2);
+  });
+  return { grid: grid, maxR: maxR, maxC: maxC };
+}
+function fmtNum(v){
+  if (v === Math.floor(v) && Math.abs(v) < 1e15) return String(Math.floor(v));
+  return String(v);
+}
+function rkValue(rk){
+  var isInt = rk & 0x02, div100 = rk & 0x01;
+  var val;
+  if (isInt){
+    val = (rk >> 2);
+    if (val & 0x20000000) val -= 0x40000000;   /* 符号扩展 */
+  } else {
+    var buf = new ArrayBuffer(8);
+    var dvv = new DataView(buf);
+    dvv.setUint32(0, 0, false);
+    dvv.setUint32(4, rk & 0xFFFFFFFC, false);
+    val = dvv.getFloat64(0, false);
+  }
+  return div100 ? val/100 : val;
+}
+
+/* 读 .xls：返回 [{name, sheet:{grid,maxR,maxC}}, ...] */
+function xlsReadAll(buf){
+  var stream = ole2Read(buf);
+  var sst = biffReadSST(stream);
+  var names = biffSheetNames(stream);
+  /* 按 BOF(0x0809) 记录切出每张表的数据段 */
+  var dv = new DataView(stream.buffer, stream.byteOffset, stream.byteLength);
+  var n = stream.length, pos = 0, subs = [];
+  while (pos + 4 <= n){
+    var id = dv.getUint16(pos, true), len = dv.getUint16(pos + 2, true);
+    if (pos + 4 + len > n) break;
+    if (id === 0x0809) subs.push(pos);
+    pos += 4 + len;
+  }
+  var sheets = [];
+  for (var i = 0; i < subs.length; i++){
+    var end = (i + 1 < subs.length) ? subs[i+1] : n;
+    var sub = stream.subarray(subs[i], end);
+    var g = biffSheetGrid(sub, sst);
+    /* 跳过全局工作簿那个 BOF：它没有任何单元格 */
+    if (g.maxR === 0 && g.maxC === 0) continue;
+    sheets.push({ name: names[sheets.length] || ('工作表' + (sheets.length+1)), sheet: g });
+  }
+  if (!sheets.length) throw new Error('这个 .xls 里没有读到内容');
+  return sheets;
+}
+
+async function handleFiles(files, targetLab){
+  var box = $('#ipResult');
+  if (!files || !files.length) return;
+  box.innerHTML = '<div class="pick">正在读取…</div>';
+  var results = [], failed = [];
+  for (var i=0;i<files.length;i++){
+    var f = files[i];
+    try {
+      var buf = await f.arrayBuffer();
+      var head = new Uint8Array(buf.slice(0, 8));
+      var isOle2 = head[0]===0xD0 && head[1]===0xCF && head[2]===0x11 && head[3]===0xE0;
+      var isZip  = head[0]===0x50 && head[1]===0x4B;
+      var sheetsHere = [];      /* [{name, sheet}] */
+
+      if (isOle2){
+        /* 旧版 .xls */
+        sheetsHere = xlsReadAll(buf);
+      } else if (isZip){
+        /* .xlsx */
+        var dv = new DataView(buf);
+        var ent = zipEntries(dv, dv.byteLength);
+        var shared = [];
+        if (ent['xl/sharedStrings.xml']){
+          var ssDoc = new DOMParser().parseFromString(await zipRead(dv, ent['xl/sharedStrings.xml']), 'application/xml');
+          var si = ssDoc.getElementsByTagNameNS(NS_MAIN,'si');
+          for (var s=0;s<si.length;s++){
+            var ts = si[s].getElementsByTagNameNS(NS_MAIN,'t'), buf2=[];
+            for (var k=0;k<ts.length;k++) buf2.push(ts[k].textContent);
+            shared.push(buf2.join(''));
+          }
+        }
+        var wbDoc = new DOMParser().parseFromString(await zipRead(dv, ent['xl/workbook.xml']), 'application/xml');
+        var shNodes = wbDoc.getElementsByTagNameNS(NS_MAIN,'sheet');
+        var sheetNames = [];
+        for (var nn=0;nn<shNodes.length;nn++) sheetNames.push(shNodes[nn].getAttribute('name'));
+        var sheetFiles = Object.keys(ent)
+          .filter(function(x){ return /^xl\/worksheets\/sheet\d+\.xml$/.test(x); })
+          .sort(function(a,b){ return parseInt(a.match(/(\d+)/)[1],10) - parseInt(b.match(/(\d+)/)[1],10); });
+        for (var x=0;x<sheetFiles.length;x++){
+          sheetsHere.push({ name: sheetNames[x] || ('工作表'+(x+1)),
+                            sheet: parseSheet(await zipRead(dv, ent[sheetFiles[x]]), shared) });
+        }
+      } else {
+        throw new Error('这个文件既不是 .xls 也不是 .xlsx（可能是 WPS 的 .et 或其他格式）');
+      }
+
+      for (var y=0;y<sheetsHere.length;y++){
+        var lab = sheetToLab(sheetsHere[y].name, sheetsHere[y].sheet);
+        lab._file = f.name;
+        lab._sheet = sheetsHere[y].name;
+        results.push(lab);
+      }
+    } catch(e){
+      failed.push({ file:f.name, msg:String(e && e.message || e) });
+    }
+  }
+  drawImportPreview(results, failed, targetLab);
+}
+
+var IMPORT_PENDING = [];
+function drawImportPreview(results, failed, targetLab){
+  IMPORT_PENDING = results;
+  var h = '';
+  failed.forEach(function(x){
+    h += '<div class="pick"><span class="bad">✗ ' + esc(x.file) + '</span><br><span class="muted">' + esc(x.msg) + '</span></div>';
+  });
+  if (!results.length && !failed.length){
+    h += '<div class="pick">没有读到内容</div>';
+  }
+  results.forEach(function(lab, i){
+    var exists = findLab(lab.id);
+    h += '<div class="pick">'
+      + '<div><span class="ok">✓</span> 工作表「' + esc(lab.id) + '」 → 实验室 <b>' + esc(lab.id) + '</b> '
+      + esc(lab.name) + (exists ? '　<span class="bad">（已存在，导入会覆盖配置）</span>' : '　<span class="ok">（新实验室）</span>') + '</div>'
+      + '<div class="muted" style="margin-top:5px">硬件 ' + lab.hw.length + ' 行 · 系统环境 ' + lab.env.length + ' 行 · 软件 ' + lab.sw.length + ' 个</div>'
+      + '</div>';
+  });
+  if (results.length){
+    var n = results.reduce(function(a,b){ return a + b.hw.length + b.env.length + b.sw.length; }, 0);
+    h += '<div class="muted" style="margin:8px 0">合计 ' + n + ' 条配置项，共 ' + IMPORT_PENDING.length + ' 个实验室。</div>';
+    h += '<div class="row-btns" style="margin:0 0 8px"><button class="btn" onclick="doImport()">确认导入</button>'
+       + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>';
+    h += '<details style="margin-top:6px"><summary class="muted" style="cursor:pointer">展开看导入后的内容（核对用）</summary>'
+       + '<pre class="prev">' + esc(IMPORT_PENDING.map(function(l){
+            return '【' + l.id + ' ' + l.name + '】\n硬件:\n' + l.hw.map(function(r){
+              return '  ' + r.item + ' | ' + r.config + ' | ' + r.year + ' | ' + r.warranty + ' | ' + r.qty;
+            }).join('\n') + '\n系统环境:\n' + l.env.map(function(r){
+              return '  ' + r.item + ' | ' + r.config;
+            }).join('\n') + '\n软件:\n' + l.sw.map(function(r){
+              return '  [' + r.cat + '] ' + r.name + ' | ' + r.ver + ' | ' + r.note;
+            }).join('\n');
+          }).join('\n\n')) + '</pre></details>';
+  }
+  box.innerHTML = h;
+}
+function doImport(){
+  if (!IMPORT_PENDING.length) return;
+  var added = 0, updated = 0;
+  IMPORT_PENDING.forEach(function(src){
+    var exists = findLab(src.id);
+    if (exists){
+      exists.name = src.name || exists.name;
+      exists.hw = src.hw; exists.env = src.env; exists.sw = src.sw;
+      updated++;
+    } else {
+      DB.labs.push({ id:src.id, name:src.name, hw:src.hw, env:src.env, sw:src.sw, repairs:[] });
+      added++;
+    }
+  });
+  DB.labs.sort(function(a,b){ return String(a.id).localeCompare(String(b.id),'zh'); });
+  save(); closeDlg();
+  IMPORT_PENDING = [];
+  CUR = null; render();
+  toast('已导入：新增 ' + added + ' 个，覆盖 ' + updated + ' 个');
+}
+
+
+/* ============================================================
+   模块二：日程表 & 状态展示
+   ------------------------------------------------------------
+   数据来源：学校发的课表（.xls / .xlsx），每个实验室一份。
+   每条课程：{ day:0-6, big:'1'-'5', crs, cls, tch, weeks:'7-14', periods:'01-02' }
+   原则：原样保留 —— weeks / periods 一律当字符串用，不规范化、不纠错。
+   说明确认过的几个事实（写代码时不要"顺手改"）：
+     · 大节共 5 个；小课次编号 01-02 / 03-04 / 06-07 / 08-09 / 10-11，并预留到 12
+     · 中间 [05] 空着不用，且编号是对的，不许把 06 改成 05
+     · 8 个实验室作息时间一致
+     · 电子文件里换行是真正的换行符，不涉及"排版拆行"
+   ============================================================ */
+
+var DAY_NAMES = ['周一','周二','周三','周四','周五','周六','周日'];
+var BIGS = ['1','2','3','4','5'];
+
+/* ---------- 周次：把 "7-14" / "6,8-12,14,16" / "3" / "单周" 展开成周号集合 ---------- */
+function weeksToSet(str){
+  var s = String(str==null?'':str).replace(/第|周|\s/g,'');
+  if (!s) return null;                                  /* 空 => 每周都有 */
+  if (/单/.test(s) && !/双/.test(s)){
+    var a = {}; for (var i=1;i<=30;i+=2) a[i]=1; return a;
+  }
+  if (/双/.test(s)){
+    var b = {}; for (var j=2;j<=30;j+=2) b[j]=1; return b;
+  }
+  var set = {}, any = false;
+  s.split(/[,，、\/]+/).forEach(function(seg){
+    seg = seg.trim();
+    if (!seg) return;
+    var m = /^(\d+)\s*[-~—到至]\s*(\d+)$/.exec(seg);
+    if (m){
+      var x = +m[1], y = +m[2];
+      if (x > y){ var t = x; x = y; y = t; }
+      for (var k=x;k<=y;k++){ set[k]=1; any=true; }
+    } else {
+      var d = seg.replace(/\D/g,'');
+      if (d){ set[+d]=1; any=true; }
+    }
+  });
+  return any ? set : null;
+}
+/* 该课程在第 weekNo 周上不上 */
+function courseInWeek(c, weekNo){
+  if (!weekNo) return true;                 /* 不指定周次时全显示 */
+  var set = weeksToSet(c.weeks);
+  if (!set) return true;                    /* 没写周次 => 每周都有 */
+  return !!set[weekNo];
+}
+/* ---------- 节次：判断某个大节是否落在这条课程的节次范围内 ---------- */
+function periodsToNums(str){
+  var out = [];
+  String(str==null?'':str).replace(/节|\s/g,'').split(/[-~—到至]/).forEach(function(x){
+    var d = x.replace(/\D/g,'');
+    if (d !== '') out.push(parseInt(d,10));
+  });
+  return out;
+}
+function periodsForBig(big){
+  /* 大节 -> 该大节包含的小课次编号（按确认的编号：01-02/03-04/06-07/08-09/10-11） */
+  var table = { '1':[1,2], '2':[3,4], '3':[6,7], '4':[8,9], '5':[10,11] };
+  return table[String(big)] || null;
+}
+function courseInBig(c, big){
+  var want = periodsForBig(big);
+  if (!want) return true;
+  var got = periodsToNums(c.periods);
+  if (!got.length) return true;             /* 没写节次 => 归属该大节 */
+  /* 只要有一个小课次落在该大节里，就算这节课在这个大节上 */
+  for (var i=0;i<got.length;i++) if (want.indexOf(got[i]) >= 0) return true;
+  /* 节次写法超出常见范围（如 [03-04-05]）时，退化为按大节序号比对 */
+  var bigNum = parseInt(String(big).replace(/\D/g,''),10);
+  if (isNaN(bigNum)) return false;
+  if (got.length >= 3){
+    var lo = got[0], hi = got[got.length-1];
+    var loBig = Math.ceil(lo/2), hiBig = Math.ceil(hi/2);
+    if (bigNum >= loBig && bigNum <= hiBig) return true;
+  }
+  return false;
+}
+/* 取某实验室在某天某大节的课程（可选按周次过滤） */
+function coursesAt(lab, day, big, weekNo){
+  if (!lab || !lab.courses) return [];
+  var out = [];
+  for (var i=0;i<lab.courses.length;i++){
+    var c = lab.courses[i];
+    if (+c.day !== +day) continue;
+    if (String(c.big) !== String(big)) continue;
+    if (weekNo && !courseInWeek(c, weekNo)) continue;
+    out.push(c);
+  }
+  return out;
+}
+/* 这门课是否"每节都上"（用于在顺次查询里列出全部课程） */
+function labCoursesOn(lab, day, weekNo){
+  if (!lab || !lab.courses) return [];
+  var out = [];
+  for (var i=0;i<lab.courses.length;i++){
+    var c = lab.courses[i];
+    if (+c.day !== +day) continue;
+    if (weekNo && !courseInWeek(c, weekNo)) continue;
+    out.push(c);
+  }
+  return out;
+}
+
+/* ---------- 日期换算 ---------- */
+function pad2(n){ return (n<10?'0':'') + n; }
+function dateOfWeekDay(weekNo, dayIdx){
+  /* 第一周周一 + (周次-1)*7 天 + 周几偏移 */
+  var fm = DB.semester && DB.semester.firstMonday;
+  if (!fm || !weekNo) return null;
+  var m = /^(\d{4})\D(\d{1,2})\D(\d{1,2})$/.exec(String(fm).trim());
+  if (!m) return null;
+  var base = new Date(+m[1], +m[2]-1, +m[3]);
+  if (isNaN(base.getTime())) return null;
+  var d = new Date(base.getTime());
+  d.setDate(d.getDate() + (weekNo-1)*7 + dayIdx);
+  return d;
+}
+function fmtDate(d){ return d ? (d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate())) : ''; }
+function todayIdx2(){ var d = new Date().getDay(); return d===0?6:d-1; }
+/* 今天第几周（需要第一周周一已填） */
+function weekOfToday(){
+  var fm = DB.semester && DB.semester.firstMonday;
+  if (!fm) return null;
+  var m = /^(\d{4})\D(\d{1,2})\D(\d{1,2})$/.exec(String(fm).trim());
+  if (!m) return null;
+  var base = new Date(+m[1], +m[2]-1, +m[3]);
+  if (isNaN(base.getTime())) return null;
+  var now = new Date();
+  var d0 = new Date(base.getFullYear(), base.getMonth(), base.getDate());
+  var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var days = Math.round((d1 - d0) / 86400000);
+  var w = Math.floor(days/7) + 1;
+  return w >= 1 ? w : null;
+}
+
+/* ---------- 程表页状态 ---------- */
+var TT = { week: null, day: null, inited: false };
+function ttInit(){
+  if (TT.inited) return;
+  var w = weekOfToday();
+  TT.week = w || 1;
+  TT.day = todayIdx2();
+  TT.inited = true;
+}
+
+/* ============================================================
+   主页的"日程表"视图：第1~5大节（行） × 各实验室（列）
+   ============================================================ */
+function renderMatrix(){
+  var labs = DB.labs;
+  var h = '';
+
+  if (!labs.length){
+    return '<div class="card"><div class="empty">还没有实验室</div></div>';
+  }
+  /* 有多少实验室还没有课表 */
+  var noSched = labs.filter(function(l){ return !(l.courses && l.courses.length); });
+
+  h += '<div class="card"><h2>日程总表<span class="hint">第1~5大节 × 各实验室</span></h2>';
+
+  /* 选周次 / 周几 */
+  h += '<div class="mx-ctl">'
+    + '<span class="lb">周次</span>'
+    + '<button class="step" onclick="ttStepWeek(-1)">−</button>'
+    + '<input type="number" id="ttWeek" min="1" max="30" value="' + (TT.week||1) + '" onchange="ttSetWeek(this.value)">'
+    + '<button class="step" onclick="ttStepWeek(1)">+</button>'
+    + '<span class="lb" style="margin-left:6px">周</span>'
+    + (weekOfToday() ? '<button class="btn sm ghost" onclick="ttSetWeek(' + weekOfToday() + ');ttSetDay(' + todayIdx2() + ')">回到本周</button>' : '')
+    + '</div>';
+
+  h += '<div class="mx-days">';
+  for (var d=0; d<7; d++){
+    var dt = dateOfWeekDay(TT.week, d);
+    h += '<button class="day-btn' + (d===TT.day?' on':'') + (d===todayIdx2() && TT.week===weekOfToday() ? ' now':'') + '" onclick="ttSetDay(' + d + ')">'
+      + DAY_NAMES[d] + (dt ? '<span class="d">' + (dt.getMonth()+1) + '/' + dt.getDate() + '</span>' : '') + '</button>';
+  }
+  h += '</div>';
+
+  if (!DB.semester || !DB.semester.firstMonday){
+    h += '<div class="muted" style="margin:2px 0 10px">还没填「本学期第一周周一」的日期，所以看不到对应日期。'
+      + ' <a href="javascript:dlgSemester()" style="color:var(--blue)">现在填一下</a></div>';
+  }
+
+  /* 矩阵：列 = 实验室，行 = 大节 */
+  h += '<div class="mx-wrap"><table class="mx"><thead><tr><th class="corner">大节</th>';
+  labs.forEach(function(lab, i){
+    h += '<th class="labcol" draggable="true" data-idx="' + i + '" title="按住可拖动排序">'
+      + '<span class="no">' + esc(lab.id) + '</span>'
+      + (lab.name ? '<span class="nm">' + esc(lab.name) + '</span>' : '')
+      + '</th>';
+  });
+  h += '</tr></thead><tbody>';
+
+  BIGS.forEach(function(big){
+    h += '<tr><th class="rowh">第' + big + '大节</th>';
+    labs.forEach(function(lab, i){
+      var cs = coursesAt(lab, TT.day, big, TT.week);
+      if (!cs.length){
+        h += '<td class="cell free"><span class="free-t">空</span></td>';
+      } else {
+        h += '<td class="cell busy" onclick="showCell(\'' + esc(lab.id) + '\',' + TT.day + ',\'' + big + '\')">'
+          + cs.map(function(c){
+              return '<div class="one">'
+                + '<div class="c1">' + esc(c.crs) + '</div>'
+                + '<div class="c2">' + esc(c.cls) + (c.tch ? ' · ' + esc(c.tch) : '') + '</div>'
+                + '<div class="c3">' + esc(c.weeks) + '周[' + esc(c.periods) + '节]</div>'
+                + '</div>';
+            }).join('')
+          + '</td>';
+      }
+    });
+    h += '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="legend"><span><i class="li"></i>空着（可借用）</span><span><i class="ib"></i>有课</span>'
+     + '<span class="muted">表头可按住左右拖动，调整实验室顺序</span></div>';
+
+  if (noSched.length){
+    h += '<div class="alert" style="margin-top:12px"><div class="t">这些实验室还没有课表数据，表里会显示为空</div>'
+      + noSched.map(function(l){ return '<b>' + esc(l.id) + '</b> ' + esc(l.name||''); }).join('　')
+      + '<div class="muted" style="margin-top:6px">进该实验室 → 课表 → 导入课表文件，或手工添加</div></div>';
+  }
+  h += '</div>';
+  return h;
+}
+function ttSetWeek(v){
+  var n = parseInt(v,10);
+  if (isNaN(n) || n < 1) n = 1;
+  if (n > 30) n = 30;
+  TT.week = n;
+  render();
+}
+function ttStepWeek(delta){ ttSetWeek((TT.week||1) + delta); }
+function ttSetDay(d){ TT.day = d; render(); window.scrollTo(0,0); }
+
+/* 点某一格：看这节课的详情 */
+function showCell(labId, day, big){
+  var lab = findLab(labId);
+  if (!lab) return;
+  var cs = coursesAt(lab, day, big, TT.week);
+  var dt = dateOfWeekDay(TT.week, day);
+  openDlg('<h3>' + esc(lab.id) + ' ' + esc(lab.name||'') + '</h3>'
+    + '<div class="st">第' + esc(TT.week) + '周 ' + DAY_NAMES[day] + (dt ? '（' + fmtDate(dt) + '）' : '')
+    + ' 第' + esc(big) + '大节（小课次 ' + (periodsForBig(big)||[]).join('-') + '）</div>'
+    + (cs.length ? cs.map(function(c){
+        return '<div class="cd">'
+          + '<div class="cd-t">' + esc(c.crs) + '</div>'
+          + '<div class="cd-l"><b>班级</b>' + esc(c.cls || '（未填）') + '</div>'
+          + '<div class="cd-l"><b>教师</b>' + esc(c.tch || '（未填）') + '</div>'
+          + '<div class="cd-l"><b>周次</b>' + esc(c.weeks) + ' 周</div>'
+          + '<div class="cd-l"><b>小课次</b>[' + esc(c.periods) + '节]</div>'
+          + '</div>';
+      }).join('') : '<div class="empty">这个时段没有课</div>')
+    + '<div class="row-btns"><button class="btn ghost" onclick="closeDlg()">关闭</button></div>');
+}
+
+/* ---------- 表头拖动排序 ---------- */
+var DRAG_FROM = -1;
+document.addEventListener('dragstart', function(e){
+  var th = e.target.closest ? e.target.closest('th.labcol') : null;
+  if (!th) return;
+  DRAG_FROM = +th.dataset.idx;
+  th.classList.add('dragging');
+  try { e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', String(DRAG_FROM)); } catch(err){}
+});
+document.addEventListener('dragover', function(e){
+  var th = e.target.closest ? e.target.closest('th.labcol') : null;
+  if (th && DRAG_FROM >= 0){ e.preventDefault(); th.classList.add('dropzone'); }
+});
+document.addEventListener('dragleave', function(e){
+  var th = e.target.closest ? e.target.closest('th.labcol') : null;
+  if (th) th.classList.remove('dropzone');
+});
+document.addEventListener('drop', function(e){
+  var th = e.target.closest ? e.target.closest('th.labcol') : null;
+  if (!th || DRAG_FROM < 0) return;
+  e.preventDefault();
+  var to = +th.dataset.idx;
+  th.classList.remove('dropzone');
+  if (to !== DRAG_FROM && !isNaN(to)){
+    var moved = DB.labs.splice(DRAG_FROM, 1)[0];
+    DB.labs.splice(to, 0, moved);
+    save();
+    render();
+    toast('已调整 ' + moved.id + ' 的位置');
+  }
+  DRAG_FROM = -1;
+});
+document.addEventListener('dragend', function(){
+  DRAG_FROM = -1;
+  Array.prototype.forEach.call(document.querySelectorAll('.dragging'), function(x){ x.classList.remove('dragging'); });
+});
+
+/* ---------- 填"本学期第一周周一" ---------- */
+function dlgSemester(){
+  var cur = (DB.semester && DB.semester.firstMonday) || '';
+  openDlg('<h3>本学期第一周周一</h3>'
+    + '<div class="st">填一次就行。之后选"第几周周几"会自动显示对应日期。</div>'
+    + '<label class="f"><span class="k">日期</span>'
+    + '<input type="text" id="semDate" value="' + esc(cur) + '" placeholder="如 2026-09-01"></label>'
+    + '<div class="muted">写成 2026-09-01 或 2026/9/1 都可以。</div>'
+    + '<div class="row-btns"><button class="btn" onclick="saveSemester()">保存</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+  setTimeout(function(){ var el=$('#semDate'); if (el) el.focus(); }, 50);
+}
+function saveSemester(){
+  var v = ($('#semDate').value || '').trim();
+  if (v && !/^\d{4}\D\d{1,2}\D\d{1,2}$/.test(v)){ toast('日期格式看不懂，请写成 2026-09-01'); return; }
+  DB.semester = { firstMonday: v };
+  save(); closeDlg();
+  if (CUR) renderLab(); else render();
+  toast(v ? '已保存，日期会自动换算' : '已清空日期');
+}
+
+/* ============================================================
+   单个实验室的课表视图（复现学校那张纸：星期一~日 × 五大节）
+   ============================================================ */
+function renderLabSchedule(lab){
+  var h = '';
+  var week = TT.week || 1;
+  var noData = !(lab.courses && lab.courses.length);
+
+  h += '<div class="card"><h2>课表<span class="hint">' + (lab.courses ? lab.courses.length : 0) + ' 条课程</span></h2>';
+
+  h += '<div class="mx-ctl">'
+    + '<span class="lb">周次</span>'
+    + '<button class="step" onclick="ttStepWeek(-1)">−</button>'
+    + '<input type="number" min="1" max="30" value="' + week + '" onchange="ttSetWeek(this.value)">'
+    + '<button class="step" onclick="ttStepWeek(1)">+</button>'
+    + '<span class="lb" style="margin-left:6px">周</span>'
+    + (weekOfToday() ? '<button class="btn sm ghost" onclick="ttSetWeek(' + weekOfToday() + ');ttSetDay(' + todayIdx2() + ')">回到本周</button>' : '')
+    + '</div>';
+
+  if (noData){
+    h += '<div class="empty" style="padding:22px">这个实验室还没有课表数据<br>'
+       + '<span class="muted">用下面的「导入课表文件」，或手工添加</span></div>'
+       + '<div class="row-btns"><button class="btn" onclick="dlgImportCourse(\'' + esc(lab.id) + '\')">导入课表文件</button>'
+       + '<button class="btn ghost" onclick="dlgAddCourse(\'' + esc(lab.id) + '\')">手工添加一门课</button></div>';
+    h += '</div>';
+    return h;
+  }
+
+  h += '<div class="mx-wrap"><table class="mx sched"><thead><tr><th class="corner">大节</th>';
+  DAY_NAMES.forEach(function(dn, di){
+    var dt = dateOfWeekDay(week, di);
+    h += '<th class="' + (dt && dt.getDay() === new Date().getDay() && week === weekOfToday() ? 'today' : '') + '">'
+      + dn + (dt ? '<span class="d">' + (dt.getMonth()+1) + '/' + dt.getDate() + '</span>' : '') + '</th>';
+  });
+  h += '</tr></thead><tbody>';
+
+  BIGS.forEach(function(big){
+    h += '<tr><th class="rowh">第' + big + '大节</th>';
+    for (var di=0; di<7; di++){
+      var cs = coursesAt(lab, di, big, week);
+      if (!cs.length){
+        h += '<td class="cell free"><span class="free-t">空</span></td>';
+      } else {
+        h += '<td class="cell busy">'
+          + cs.map(function(c){
+              return '<div class="one">'
+                + '<div class="c1">' + esc(c.crs) + '</div>'
+                + '<div class="c2">' + esc(c.cls) + (c.tch ? ' · ' + esc(c.tch) : '') + '</div>'
+                + '<div class="c3">' + esc(c.weeks) + '周[' + esc(c.periods) + '节]</div>'
+                + '</div>';
+            }).join('')
+          + '</td>';
+      }
+    }
+    h += '</tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="legend"><span><i class="li"></i>空</span><span><i class="ib"></i>有课</span></div>';
+  h += '<div class="row-btns">'
+     + '<button class="btn ghost sm" onclick="dlgImportCourse(\'' + esc(lab.id) + '\')">导入课表文件（覆盖本实验室课表）</button>'
+     + '<button class="btn ghost sm" onclick="dlgAddCourse(\'' + esc(lab.id) + '\')">手工添加一门课</button>'
+     + '<button class="btn ghost sm" onclick="dlgListCourses(\'' + esc(lab.id) + '\')">查看/删除全部课程</button>'
+     + '</div>';
+  h += '</div>';
+  return h;
+}
+
+/* 课程列表（可删除） */
+function dlgListCourses(labId){
+  var lab = findLab(labId);
+  if (!lab) return;
+  var list = (lab.courses||[]).slice();
+  var html = '<h3>' + esc(lab.id) + ' 的课程</h3><div class="st">共 ' + list.length + ' 条</div>';
+  if (!list.length){
+    html += '<div class="empty">还没有课程</div>';
+  } else {
+    html += '<div style="max-height:52vh;overflow-y:auto">';
+    list.forEach(function(c, i){
+      html += '<div class="cd" style="display:flex;gap:9px;align-items:flex-start">'
+        + '<div style="flex:1;min-width:0">'
+        + '<div class="cd-t" style="font-size:14px">' + esc(c.crs) + '</div>'
+        + '<div class="muted">' + DAY_NAMES[c.day] + ' 第' + esc(c.big) + '大节 · ' + esc(c.cls)
+        + (c.tch ? ' · ' + esc(c.tch) : '') + ' · ' + esc(c.weeks) + '周[' + esc(c.periods) + '节]</div>'
+        + '</div>'
+        + '<button class="del" onclick="delCourse(\'' + esc(labId) + '\',' + i + ')">✕</button>'
+        + '</div>';
+    });
+    html += '</div>';
+  }
+  html += '<div class="row-btns"><button class="btn ghost" onclick="closeDlg()">关闭</button></div>';
+  openDlg(html);
+}
+function delCourse(labId, idx){
+  var lab = findLab(labId);
+  if (!lab) return;
+  var c = lab.courses[idx];
+  if (!c) return;
+  if (!confirm('删除这门课？\n' + c.crs + ' ' + DAY_NAMES[c.day] + ' 第' + c.big + '大节')) return;
+  lab.courses.splice(idx, 1);
+  save();
+  closeDlg();
+  if (CUR) renderLab(); else render();
+  toast('已删除');
+}
+
+/* 手工添加一门课 */
+function dlgAddCourse(labId){
+  var lab = findLab(labId);
+  if (!lab) return;
+  var dayOpts = DAY_NAMES.map(function(d,i){ return '<option value="' + i + '">' + d + '</option>'; }).join('');
+  var bigOpts = BIGS.map(function(b){ return '<option value="' + b + '">第' + b + '大节</option>'; }).join('');
+  openDlg('<h3>手工添加课程</h3><div class="st">' + esc(lab.id) + ' ' + esc(lab.name||'') + '</div>'
+    + '<label class="f"><span class="k">课程名称</span><input type="text" id="ncCrs" placeholder="如 数据结构（C++）"></label>'
+    + '<div class="two">'
+    + '<label class="f"><span class="k">星期</span><select id="ncDay">' + dayOpts + '</select></label>'
+    + '<label class="f"><span class="k">大节</span><select id="ncBig">' + bigOpts + '</select></label>'
+    + '</div>'
+    + '<div class="two">'
+    + '<label class="f"><span class="k">班级</span><input type="text" id="ncCls" placeholder="如 25智能3班"></label>'
+    + '<label class="f"><span class="k">教师</span><input type="text" id="ncTch" placeholder="如 孙可可"></label>'
+    + '</div>'
+    + '<div class="two">'
+    + '<label class="f"><span class="k">周次</span><input type="text" id="ncWeeks" placeholder="如 7-14 或 6,8-12,14,16"></label>'
+    + '<label class="f"><span class="k">小课次</span><input type="text" id="ncPer" placeholder="如 01-02 或 08"></label>'
+    + '</div>'
+    + '<div class="muted">周次和小课次按学校课表原样填，别改写法。</div>'
+    + '<div class="row-btns"><button class="btn" onclick="saveCourse(\'' + esc(labId) + '\')">保存</button>'
+    + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>');
+  setTimeout(function(){ var el=$('#ncCrs'); if (el) el.focus(); }, 50);
+}
+function saveCourse(labId){
+  var lab = findLab(labId);
+  if (!lab) return;
+  var crs = ($('#ncCrs').value || '').trim();
+  if (!crs){ toast('请填课程名称'); return; }
+  if (!lab.courses) lab.courses = [];
+  lab.courses.push({
+    day: +$('#ncDay').value,
+    big: $('#ncBig').value,
+    crs: crs,
+    cls: ($('#ncCls').value || '').trim(),
+    tch: ($('#ncTch').value || '').trim(),
+    weeks: ($('#ncWeeks').value || '').trim(),
+    periods: ($('#ncPer').value || '').trim()
+  });
+  save(); closeDlg();
+  if (CUR) renderLab(); else render();
+  toast('已添加：' + crs);
+}
+
+/* 导入课表文件（覆盖某实验室的课表） */
+var IMPORT_TARGET = '';      /* 导入目标实验室；空 = 由标题自动识别 */
+function dlgImportCourse(labId){
+  IMPORT_TARGET = labId || '';
+  /* 注意：labId 允许为空 —— 日程总表上的入口就是"哪个实验室都行，按标题认"。
+     以前这里写了 if(!lab) return，导致那个按钮点了没反应。 */
+  var lab = IMPORT_TARGET ? findLab(IMPORT_TARGET) : null;
+  openDlg('<h3>导入课表文件</h3>'
+    + '<div class="st">'
+    + (lab ? esc(lab.id) + ' ' + esc(lab.name||'') + '　导入会覆盖该实验室现有课表。<br>'
+           : '可一次选多个文件。程序按标题里的房间号认实验室。<br>')
+    + '支持 .xls 和 .xlsx。</div>'
+    + '<label class="filebox"><div class="fi">📄</div>'
+    + '<div class="ft">点这里选择课表文件</div>'
+    + '<div class="fs">支持 .xls 和 .xlsx，可一次选多个</div>'
+    + '<input type="file" id="icFile" accept=".xls,.xlsx" multiple></label>'
+    + '<div id="icResult"></div>'
+    + '<div class="row-btns"><button class="btn ghost" onclick="closeDlg()">关闭</button></div>');
+  $('#icFile').onchange = function(e){ handleCourseFiles(e.target.files, IMPORT_TARGET); };
+}
+
+var COURSE_PENDING = [];
+async function handleCourseFiles(files, targetLab){
+  var box = $('#icResult');
+  if (!files || !files.length) return;
+  box.innerHTML = '<div class="pick">正在读取…</div>';
+  var found = [], failed = [];
+  for (var i=0;i<files.length;i++){
+    var f = files[i];
+    try {
+      var buf = await f.arrayBuffer();
+      var head = new Uint8Array(buf.slice(0,8));
+      var isOle2 = head[0]===0xD0 && head[1]===0xCF && head[2]===0x11 && head[3]===0xE0;
+      var isZip  = head[0]===0x50 && head[1]===0x4B;
+      var sheetsHere = [];
+      if (isOle2){
+        sheetsHere = xlsReadAll(buf);
+      } else if (isZip){
+        var dv = new DataView(buf);
+        var ent = zipEntries(dv, dv.byteLength);
+        var shared = [];
+        if (ent['xl/sharedStrings.xml']){
+          var ssDoc = new DOMParser().parseFromString(await zipRead(dv, ent['xl/sharedStrings.xml']), 'application/xml');
+          var si = ssDoc.getElementsByTagNameNS(NS_MAIN,'si');
+          for (var s=0;s<si.length;s++){
+            var ts = si[s].getElementsByTagNameNS(NS_MAIN,'t'), b2=[];
+            for (var k=0;k<ts.length;k++) b2.push(ts[k].textContent);
+            shared.push(b2.join(''));
+          }
+        }
+        var wbDoc = new DOMParser().parseFromString(await zipRead(dv, ent['xl/workbook.xml']), 'application/xml');
+        var shNodes = wbDoc.getElementsByTagNameNS(NS_MAIN,'sheet');
+        var sNames = [];
+        for (var nn=0;nn<shNodes.length;nn++) sNames.push(shNodes[nn].getAttribute('name'));
+        var sFiles = Object.keys(ent).filter(function(x){ return /^xl\/worksheets\/sheet\d+\.xml$/.test(x); })
+          .sort(function(a,b){ return parseInt(a.match(/(\d+)/)[1],10) - parseInt(b.match(/(\d+)/)[1],10); });
+        for (var x=0;x<sFiles.length;x++){
+          sheetsHere.push({ name: sNames[x] || ('工作表'+(x+1)), sheet: parseSheet(await zipRead(dv, ent[sFiles[x]]), shared) });
+        }
+      } else {
+        throw new Error('这个文件既不是 .xls 也不是 .xlsx');
+      }
+      sheetsHere.forEach(function(sh){
+        if (!looksLikeCourseSheet(sh.sheet)) return;      /* 只处理课表 */
+        var got = courseSheetToLab(sh.name, sh.sheet);
+        got._file = f.name;
+        found.push(got);
+      });
+    } catch(e){
+      failed.push({ file:f.name, msg:String(e && e.message || e) });
+    }
+  }
+  drawCoursePreview(found, failed, targetLab);
+}
+function drawCoursePreview(found, failed, targetLab){
+  COURSE_PENDING = found;
+  var box = $('#icResult');
+  var h = '';
+  failed.forEach(function(x){
+    h += '<div class="pick"><span class="bad">✗ ' + esc(x.file) + '</span><br><span class="muted">' + esc(x.msg) + '</span></div>';
+  });
+  if (!found.length && !failed.length){
+    h += '<div class="pick">没有在这些文件里找到课表（要含"教室课表"或"教室:"的那种表）</div>';
+  }
+  found.forEach(function(g){
+    var exist = findLab(g.id);
+    h += '<div class="pick">'
+      + '<div><span class="ok">✓</span> 实验室 <b>' + esc(g.id) + '</b>　识别到 <b>' + g.courses.length + '</b> 条课程'
+      + (exist ? '' : '　<span class="bad">（程序里还没有这个实验室，会新建）</span>') + '</div>'
+      + '<div class="muted" style="margin-top:4px">' + esc(g.title || '') + '</div>'
+      + '<details style="margin-top:6px"><summary class="muted" style="cursor:pointer">展开核对课程内容</summary>'
+      + '<pre class="prev">' + esc(g.courses.map(function(c){
+            return DAY_NAMES[c.day] + ' 第' + c.big + '大节 | ' + c.crs + ' | ' + c.cls
+                 + ' | ' + c.tch + ' | ' + c.weeks + '周[' + c.periods + '节]';
+          }).join('\n')) + '</pre></details>'
+      + '</div>';
+  });
+  if (found.length){
+    h += '<div class="row-btns" style="margin-top:4px">'
+       + '<button class="btn" onclick="doImportCourses()">确认导入（覆盖这些实验室的课表）</button>'
+       + '<button class="btn ghost" onclick="closeDlg()">取消</button></div>';
+  }
+  box.innerHTML = h;
+}
+function doImportCourses(){
+  if (!COURSE_PENDING.length) return;
+  var added = 0, updated = 0;
+  COURSE_PENDING.forEach(function(g){
+    var lab = findLab(g.id);
+    if (lab){
+      lab.courses = g.courses;
+      if (!lab.name && !g.name) { /* 名称留空，由老师自己填 */ }
+      updated++;
+    } else {
+      DB.labs.push({ id:g.id, name:'', hw:[], env:[], sw:[], courses:g.courses, repairs:[] });
+      added++;
+    }
+  });
+  save(); closeDlg();
+  COURSE_PENDING = [];
+  TT.inited = false; ttInit();
+  if (CUR) renderLab(); else render();
+  toast('课表已导入：新建 ' + added + ' 个实验室，覆盖 ' + updated + ' 个');
+}
+
+/* ============================================================
+   启动
+   ============================================================ */
+(function init(){
+  var saved = load();
+  if (saved){ DB = saved; }
+  else { DB = seedData(); save(); }
+  /* 补全字段，防止旧数据缺项 */
+  DB.labs.forEach(function(l){
+    if (!l.hw) l.hw = [];
+    if (!l.env) l.env = [];
+    if (!l.sw) l.sw = [];
+    if (!l.repairs) l.repairs = [];
+    if (!l.courses) l.courses = [];
+  });
+  if (!DB.semester) DB.semester = { firstMonday: '' };
+  render();
+})();
+</script>
+</body>
+</html>
